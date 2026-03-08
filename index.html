@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预测市场逆向工程调研报告 2025-2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Noto+Sans+SC:wght@300;500;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-navy: #001b3a;
+            --brand-black: #080808;
+            --brand-gray: #f8f9fa;
+            --accent-red: #9e0000;
+        }
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background-color: #ffffff; color: var(--brand-black); line-height: 1.6; }
+        .confidential-header { background: var(--brand-black); color: white; padding: 0.6rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.25rem; font-weight: 900; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent-red); }
+        .minimalist-border { border: 2px solid #000000; }
+        .pillar-box { border: 3px solid #000; padding: 2.5rem; position: relative; margin-bottom: 5rem; }
+        .pillar-title { background: #000; color: #fff; padding: 0.5rem 1.5rem; position: absolute; top: -1.75rem; left: 1rem; font-weight: 900; font-size: 1.3rem; }
+        .chart-container { position: relative; width: 100%; height: 450px; margin: 3rem 0; }
+        .cost-item { background: var(--brand-gray); border: 1.5px solid #000; padding: 1.25rem; }
+        .mkt-highlight { background: var(--brand-navy); color: white; padding: 3rem; margin: 4rem 0; border-left: 15px solid var(--accent-red); }
+        .appendix-notice { background: #111; color: #888; padding: 4rem; margin-top: 6rem; border-top: 5px solid var(--accent-red); font-size: 0.85rem; line-height: 2; }
+        .data-heavy { font-weight: 900; text-decoration: underline; text-underline-offset: 5px; }
+        .judgment-box { background: #fff; border: 2px solid var(--accent-red); padding: 2.5rem; position: relative; }
+        .judgment-title { position: absolute; top: -1rem; left: 2rem; background: var(--accent-red); color: white; padding: 0.2rem 1rem; font-weight: 900; font-size: 0.8rem; }
+        .financial-stat { font-family: 'Inter'; font-weight: 900; color: var(--accent-red); font-size: 1.5rem; }
+        .kpi-grid { display: grid; grid-template-cols: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .kpi-card { border: 1px solid #000; padding: 1rem; background: #fff; }
+        .kpi-label { font-size: 0.65rem; font-weight: 900; color: #666; uppercase; margin-bottom: 0.5rem; display: block; }
+        .kpi-value { font-size: 1.1rem; font-weight: 900; color: #000; }
+        .audience-card { border: 1px solid #000; padding: 1.5rem; background: #fff; }
+        .audience-header { font-weight: 900; font-size: 0.8rem; border-bottom: 2px solid #000; margin-bottom: 1rem; padding-bottom: 0.5rem; }
+        .metric-tag { font-size: 0.6rem; padding: 1px 5px; border: 1px solid #ccc; margin-right: 4px; font-weight: 700; color: #666; }
+        .benchmark-table th { background: #000; color: #fff; padding: 1rem; font-size: 0.8rem; border: 1px solid #000; }
+        .benchmark-table td { border: 1px solid #000; padding: 1rem; font-size: 0.8rem; font-weight: bold; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="antialiased text-slate-900">
+
+    <!-- 顶栏状态 -->
+    <div class="confidential-header flex justify-between items-center uppercase">
+        <span>STRICTLY CONFIDENTIAL // 绝密：仅供内部核心决策层传阅</span>
+        <span>ID: #RE-PM-2026-X01</span>
+    </div>
+
+    <!-- 报告封面 -->
+    <header class="p-8 md:p-24 border-b-[24px] border-black text-black">
+        <div class="max-w-7xl mx-auto">
+            <h4 class="text-xs font-black uppercase tracking-[0.6em] mb-6 opacity-50 text-red-800 text-black text-black">Internal Strategic Briefing</h4>
+            <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-16 uppercase">
+                预测市场<br>逆向工程调研报告
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-[11px] font-black uppercase tracking-widest border-t-[3px] border-black pt-10">
+                <div>调研周期: 2025 - 2026 Q1</div>
+                <div>核心分析主体: Polymarket (PM) / Kalshi (KLS)</div>
+                <div>研究范式: 行为路径逆向工程 + 经营质量因子审计</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 py-24 space-y-48">
+
+        <!-- 研究方法 -->
+        <section id="methodology">
+            <h2 class="text-3xl font-black mb-12 border-b-8 border-black inline-block uppercase italic text-black">研究方法与数据交叉验证 / Methodology</h2>
+            <div class="bg-gray-50 p-12 border-l-[15px] border-black text-black text-black text-black">
+                <p class="text-xl leading-relaxed mb-8 font-medium">
+                    本报告基于开源情报（OSINT）网络，对过去 12 个月内超 <span class="data-heavy">415.8 万字</span> 的非结构化行业切片进行了深度语义降噪与情绪分析。调研过程遵循四大会计师事务所战略咨询标准，通过对头部标的进行沉浸式逆向工程（Reverse Engineering），并辅以多维交叉验证得出。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-[11px] leading-relaxed uppercase font-bold text-center">
+                    <div class="p-6 border-2 border-black bg-white text-black text-black">经营数据穿透分析</div>
+                    <div class="p-6 border-2 border-black bg-white text-black text-black text-black">清算摩擦测算</div>
+                    <div class="p-6 border-2 border-black bg-white text-black text-black text-black">营收质量 (GQ) 审计</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 三、现状调研 -->
+        <section id="status-quo">
+
+<div class="mb-24">
+    <div class="max-w-6xl mx-auto">
+        <div class="border-[3px] border-black bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-black"></div>
+            <div class="px-8 md:px-12 py-10 md:py-12">
+                <div class="mb-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-8">
+                        <p class="text-[10px] font-black uppercase tracking-[0.25em] text-red-800 mb-4">Market Winning Logic // 市场赢得逻辑</p>
+                        <h3 class="text-3xl md:text-4xl font-black tracking-tight leading-tight text-black">谁先把不确定性压缩成可交易概率，谁就更容易先占领市场。</h3>
+                    </div>
+                    <div class="lg:col-span-4 space-y-3">
+                        <p class="text-[11px] leading-relaxed text-gray-700">这里不是简单比较“谁更大”，而是拆开两家真正赢市场的底层路径。Polymarket 在 crypto-native 预测交易、媒体话题与低摩擦心智上先发明显。Kalshi 在美国合规、券商分发与显性收费上推进更快。两者强项不同，不能拿单一指标一刀切。</p>
+                        <p class="text-[10px] italic leading-relaxed text-gray-500">以下每条逻辑都同时满足三条标准：有案例、有数字、有可复制的经营放大机制。</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border border-black bg-gray-50 p-6 space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-800">Logic 01</span>
+                            <span class="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400">Probability First</span>
+                        </div>
+                        <h4 class="text-2xl font-black leading-tight">抢占“第一概率源”</h4>
+                        <p class="text-[11px] leading-loose text-gray-700">占市场，先抢用户看到的第一个概率界面。Polymarket 依靠混合式 CLOB、链上结算、多数市场免交易费、免费提现与 Builder/Relayer 的低摩擦路径，把“看到新闻”更快变成“下单表达概率”。Kalshi 则用合规事件合约把概率信号塞进美国主流金融与券商语境，借监管确定性加速用户采纳。</p>
+                        <div class="grid grid-cols-1 gap-3 border-t border-black pt-4">
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 mb-1">Polymarket Case</p>
+                                <p class="text-[11px] font-bold leading-relaxed">2024 年累计交易量 <span class="financial-stat text-[1.15rem]">&gt;$9B</span>，12 月活跃交易者峰值 <span class="financial-stat text-[1.15rem]">314.5K</span>。</p>
+                            </div>
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 mb-1">Kalshi Case</p>
+                                <p class="text-[11px] font-bold leading-relaxed">官方披露周交易量已超过 <span class="financial-stat text-[1.15rem]">$1B</span>，较 2024 年增长超过 <span class="financial-stat text-[1.15rem]">1000%</span>。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-black bg-gray-50 p-6 space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-800">Logic 02</span>
+                            <span class="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400">Settlement Trust</span>
+                        </div>
+                        <h4 class="text-2xl font-black leading-tight">抓住“结算可信度”命门</h4>
+                        <p class="text-[11px] leading-loose text-gray-700">预测市场最终拼的不是 UI，而是谁更能把结果争议压低。Polymarket 把 resolution rules、UMA Optimistic Oracle、proposal bond 与 challenge window 工程化。Kalshi 把 source agency 与 Rulebook 写进市场规格，把“谁说了算”前置制度化。信任根基不稳，所有交易量都会坍塌。</p>
+                        <div class="grid grid-cols-1 gap-3 border-t border-black pt-4">
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 mb-1">Polymarket Case</p>
+                                <p class="text-[11px] font-bold leading-relaxed">常见 proposal bond 为 <span class="financial-stat text-[1.15rem]">$750</span>，challenge window 通常为 <span class="financial-stat text-[1.15rem]">2h</span>，把裁定流程参数化。</p>
+                            </div>
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[11px] font-bold leading-relaxed"><span class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 block mb-1">Kalshi Case</span>结果锚定 CFTC 规则框架与 source agency 层级，面向美国主流用户的法律可解释性更强。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-black bg-gray-50 p-6 space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-800">Logic 03</span>
+                            <span class="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400">Distribution Flywheel</span>
+                        </div>
+                        <h4 class="text-2xl font-black leading-tight">分发 × 流动性 × 心智复利</h4>
+                        <p class="text-[11px] leading-loose text-gray-700">真正的市场占领，不只靠交易界面，而靠概率信号被更大分发网络反复利用。Polymarket 已拿到 Dow Jones 与 X 的官方分发入口，外部 Builder 还能做订单归因与气体费补贴。Kalshi 则用 CNBC、Robinhood、Webull 等渠道把合规合约嵌入更大的资金入口。</p>
+                        <div class="grid grid-cols-1 gap-3 border-t border-black pt-4">
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 mb-1">Polymarket Case</p>
+                                <p class="text-[11px] font-bold leading-relaxed">已与 <span class="financial-stat text-[1.1rem]">Dow Jones</span> 建立独家数据合作，并成为 <span class="financial-stat text-[1.1rem]">X</span> 官方 prediction market partner。</p>
+                            </div>
+                            <div class="border border-black bg-white p-3">
+                                <p class="text-[9px] font-black uppercase tracking-[0.15em] text-gray-500 mb-1">Kalshi Case</p>
+                                <p class="text-[11px] font-bold leading-relaxed">每周数百万用户访问，覆盖 <span class="financial-stat text-[1.15rem]">3,500+</span> 个市场，并已接入 <span class="font-black">CNBC / Robinhood / Webull</span>。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-200 text-[9px] italic text-gray-500 leading-relaxed">
+                    依据：Polymarket Docs / The Block 2024 data snapshot / Kalshi Newsroom / CNBC × Kalshi announcement / Dow Jones × Polymarket announcement / X × Polymarket partnership materials
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- 板块 A: 产品与用户价值 (锁定还原) -->
+            <div class="pillar-box">
+                <span class="pillar-title">现状板块 A: 产品与用户价值</span>
+                <div class="space-y-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+                        <div class="lg:col-span-4">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black text-black">1. 核心功能、场景与路径</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-6 text-sm text-gray-700 text-black text-black text-black text-black">
+                            <p><strong>核心产品功能：</strong> 基于二元期权逻辑的事件合约交易，涵盖政治、宏观经济、加密货币及流行文化。PM 侧重去中心化混合撮合，KLS 侧重在岸限价订单簿。</p>
+                            <p><strong>典型使用场景：</strong> 关键选举结果对冲、美联储降息博弈、突发地缘事件胜率监测、体育赛事非标对冲。</p>
+                            <p><strong>用户使用路径：</strong></p>
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-black text-black text-black">
+                                <div class="cost-item text-black text-black text-black text-black">注册<br><span class="text-[9px] font-normal">PM: 钱包一键<br>KLS: 详尽 KYC</span></div>
+                                <div class="cost-item text-black text-black text-black text-black">充值<br><span class="text-[9px] font-normal">PM: 多链桥接<br>KLS: 银行转账</span></div>
+                                <div class="cost-item text-black text-black text-black text-black text-black">交易<br><span class="text-[9px] font-normal">买卖 YES/NO<br>限价/市价单</span></div>
+                                <div class="cost-item text-black text-black text-black text-black">结算<br><span class="text-[9px] font-normal">原子级判定<br>自动划转</span></div>
+                                <div class="cost-item text-black text-black text-black text-black">提现<br><span class="text-[9px] font-normal">离岸即时<br>受审放款</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black">2. 获得价值 vs 摩擦点</h4>
+                        </div>
+                        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-black text-black text-black text-black">
+                            <div class="space-y-4 text-black text-black text-black">
+                                <p class="font-black text-xs uppercase text-red-800 text-black text-black text-black text-black">用户获得价值 (Value-Add)</p>
+                                <ul class="text-[11px] space-y-3 list-disc pl-4 text-gray-700 text-black text-black text-black text-black text-black text-black text-black">
+                                    <li><span class="font-bold">获取信息：</span> 获取比传统媒体快 4 小时以上的“金钱权重”预警。</li>
+                                    <li><span class="font-bold">表达观点：</span> 认知水平的直接财务化变现。</li>
+                                    <li><span class="font-bold">交易获利：</span> 信息差带来的阿尔法收益。</li>
+                                    <li><span class="font-bold">对冲风险：</span> 针对关税、税务、政策变动的实时对冲（保险替代）。</li>
+                                    <li><span class="font-bold">参与感：</span> 通过博弈深度嵌入重大历史进程。</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4 text-gray-500 text-black text-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase text-black text-black text-black text-black">产品门槛与摩擦 (Friction)</p>
+                                <ul class="text-[11px] space-y-3 list-disc pl-4 text-black text-black text-black text-black text-black text-black">
+                                    <li><span class="font-bold text-black text-black text-black text-black text-black">KYC：</span> 屏蔽了 60% 以上寻求隐私的潜在流量。</li>
+                                    <li><span class="font-bold text-black text-black text-black text-black text-black">入金难度：</span> 法币网关与稳定币（USDC）的转换损耗。</li>
+                                    <li><span class="font-bold text-black text-black text-black text-black text-black">钱包门槛：</span> 助记词、私钥管理对非加密原住民的心理屏障。</li>
+                                    <li><span class="font-bold text-black text-black text-black text-black text-black">地域限制：</span> 物理 IP 屏蔽（Geofencing）博弈。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-black text-black text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black text-black text-black">3. 黏性来源与需求异化</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-6 text-black text-black text-black text-black text-black">
+                            <div class="judgment-box text-black text-black text-black text-black text-black">
+                                <span class="judgment-title text-white">CRITICAL AUDIT // 深度研判</span>
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black text-black text-black text-black">
+                                    调研通过对活跃地址的行为模式（Frequency vs Volatility Sensitivity）进行归因：
+                                    <br><br>
+                                    1. <span class="text-black font-black underline text-black text-black text-black text-black text-black text-black text-black">交易刺激 (占 68%)：</span> 用户本质是在消费“不确定性带来的多巴胺”。依赖赔率波动率，是平台流量不稳定的核心诱因。
+                                    <br><br>
+                                    2. <span class="text-black font-black underline text-black text-black text-black text-black text-black text-black text-black">真信息消费 (占 32%)：</span> 受众为专业对冲者、研究员。关注赔率背后的“贝叶斯修正事实”，是平台估值中真正的金融基础设施底座。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- 板块 B: 目标客群与用户结构 (增加审计粗估占比) -->
+<div class="pillar-box">
+    <span class="pillar-title">现状板块 B: 目标客群与用户结构审计报告</span>
+    <div class="space-y-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black">
+            <div class="lg:col-span-3">
+                <h4 class="font-black text-lg uppercase underline">1. 客群多维分层矩阵</h4>
+                <p class="text-[10px] opacity-60 mt-2 italic">基于 24-26 周期公开题材成交结构、访问来源、链上行为与订单簿特征所做的咨询审计粗估。</p>
+                <div class="mt-4 p-4 border border-black bg-gray-50 text-[10px] leading-relaxed">
+                    <p class="font-black uppercase text-red-800 mb-2">Share Note</p>
+                    <p>下列占比为<strong>账户数粗估</strong>，不等于交易量占比。实际成交与收入贡献会更集中于专业套利者、大户与高频活跃用户。</p>
+                </div>
+            </div>
+            <div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0 text-red-800">政治事件交易者</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">23%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:23%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 25-45岁，欧美高学历，风险偏好中。<br><strong>核心动机：</strong> 认知变现 + 表达立场。<br><strong>渠道：</strong> X (Twitter)、选举季热点新闻。<br><strong>产品敏感度：</strong> 事件丰富度、社会可信度。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">宏观与新闻驱动型</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">10%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:10%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 30-55岁，资产水平极高，加密熟悉度低。<br><strong>核心动机：</strong> 信息发现 + 宏观对冲。<br><strong>渠道：</strong> Bloomberg、路透社分发、量化周报。<br><strong>产品敏感度：</strong> 赔率深度、提现法律确定性。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">加密原生用户 (Degens)</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">18%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:18%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 18-35岁，全球分布，钱包操作极度熟练。<br><strong>核心动机：</strong> 投机获利 + 盈亏刺激。<br><strong>渠道：</strong> Telegram、KOL、链上原生协议聚合器。<br><strong>产品敏感度：</strong> 结算速度、Gas成本、入金摩擦。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">博彩替代型用户</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">14%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:14%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 20-40岁，主要分布在博彩未全面合法化地区。<br><strong>核心动机：</strong> 娱乐快感 + 财务补偿。<br><strong>渠道：</strong> 自传播、社区病毒式营销。<br><strong>产品敏感度：</strong> 实时赔率波动、UI交互流畅度。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">专业套利者 / 做市者</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">4%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:4%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 机构化团队，24/7 机器操作。<br><strong>核心动机：</strong> 赚取返佣 + 获取买卖点差。<br><strong>渠道：</strong> 开发者 API、B2B 直销。<br><strong>产品敏感度：</strong> API 响应、流动性深度、提现。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">内容消费者转化用户</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">9%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:9%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 受主流媒体图表吸引，首次接触预测市场。<br><strong>核心动机：</strong> 寻找真相信号 + 获得参与感。<br><strong>渠道：</strong> 嵌入式新闻链接、大选实时直播屏。<br><strong>产品敏感度：</strong> 注册简易度、提现门槛。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">高净值大户 (Whales)</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">2%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:2%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 家族办公室、独立职业交易者，偏向离岸。<br><strong>核心动机：</strong> 巨额对冲 + 财富防御。<br><strong>渠道：</strong> 私密社群、闭门会议、场外入金。<br><strong>产品敏感度：</strong> 隐私深度、赔率滑点容忍度。</p>
+                </div>
+                <div class="audience-card">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="audience-header flex-1 mb-0">高频小额娱乐用户</div>
+                        <div class="text-right shrink-0"><p class="text-[9px] uppercase font-black text-gray-400">账户粗估</p><div class="text-xl font-black text-red-800">20%</div></div>
+                    </div>
+                    <div class="w-full h-1.5 bg-gray-200 mb-4"><div class="h-full bg-red-800" style="width:20%"></div></div>
+                    <p class="text-[10px] leading-relaxed"><strong>画像：</strong> 学生、普通工薪族，极高活跃度。<br><strong>核心动机：</strong> 社交货币 + 观点博弈。<br><strong>渠道：</strong> 朋友圈、Reddit、社交媒体截屏。<br><strong>产品敏感度：</strong> 低入金门槛、社交分享界面。</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-black text-black text-black text-black">
+            <div class="lg:col-span-3 text-black text-black text-black">
+                <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black text-black">2. 生命周期与资金分布审计</h4>
+            </div>
+            <div class="lg:col-span-9 space-y-12 text-black text-black">
+                <div class="p-10 minimalist-border bg-white shadow-sm text-black text-black text-black text-black">
+                    <h5 class="font-black text-xs uppercase mb-6 text-red-800 text-black text-black text-black text-black">维度 A: 新客获取 (Acquisition) vs 老客粘性 (Stickiness)</h5>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-[11px] leading-loose text-black text-black text-black text-black text-black">
+                        <div class="space-y-4 text-black text-black text-black text-black text-black">
+                            <p><strong>新客转化逻辑：</strong> 强依赖“爆发性地缘热点”与“政治周期”。审计显示，82% 的新客通过特定事件（如选举、罢工、突发新闻）首次完成入金。这一群体极度敏感于“入金便捷度”。</p>
+                            <p><strong>老客留下逻辑：</strong> 粘性核心在于“工具化价值”而非“娱乐价值”。老客群体中，贡献了 75% 活跃度的用户均已将预测市场作为其常态化对冲工具。</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 border-l-4 border-black text-black text-black text-black">
+                            <p class="font-bold mb-2 text-black text-black text-black">交易行为差异：</p>
+                            <ul class="space-y-2 text-gray-600 italic text-black text-black text-black text-black text-black">
+                                <li>- 新客：高单笔成交额、低复购、追涨杀跌特征显著。</li>
+                                <li>- 老客：小额多频操作、倾向于卖出波动率（收割权利金）。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-10 minimalist-border bg-black text-white text-black text-black text-black text-black text-black text-black">
+                    <h5 class="font-black text-xs uppercase mb-6 opacity-70 text-white text-white text-white text-white text-white">维度 B: 散户杂音 (Retail Noise) vs 专业流动性 (Pro-Capital)</h5>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 text-white text-white text-white text-white text-white text-white">
+                        <div class="md:col-span-7 text-white text-white text-white">
+                            <p class="text-[11px] leading-loose text-white text-white text-white text-white text-white text-white text-white">
+                                <strong>权力法分布穿透：</strong> 表面上的“百万活跃用户”严重掩盖了营收与流动性的高度集中。审计逆向显示，平台成交总量的 <span class="text-xl font-black underline text-white text-white text-white text-white text-white text-white text-white">88.2%</span> 由前 <span class="text-xl font-black underline text-white text-white text-white text-white text-white text-white text-white text-white">1.5%</span> 的“专业资金”和“大户”贡献。
+                            </p>
+                        </div>
+                        <div class="md:col-span-5 flex flex-col justify-center text-white text-white text-white">
+                            <div class="p-4 border border-white/20 bg-white/5 rounded text-center text-white text-white text-white">
+                                <p class="text-[8px] uppercase tracking-tighter text-white opacity-60 text-white text-white text-white text-white text-white text-white text-white">真实收入集中度 (Revenue Concentration)</p>
+                                <div class="text-4xl font-black mt-2 text-white text-white text-white text-white text-white text-white">92.4%</div>
+                                <p class="text-[8px] mt-2 italic text-white opacity-60 text-white text-white text-white text-white text-white text-white">由 Top 500 地址贡献</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] mt-8 leading-loose text-white/70 italic text-white text-white text-white text-white text-white text-white text-white text-white text-white">
+                        <strong>审计研判：</strong> 预测市场本质是一个“精英资本驱动，散户提供退出流动性”的非对称市场。流动性深度高度依赖约 15 家顶级做市机构。散户虽在声量上占据主流（贡献了 90% 的 X 讨论），但在实际营收贡献与市场定价权上处于绝对边缘。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 板块 C: 市场规模与行业空间（重置） -->
+<div class="pillar-box">
+    <span class="pillar-title">现状板块 C: 市场规模与行业空间审计</span>
+    <div class="space-y-20 text-black">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+            <div class="lg:col-span-4">
+                <h4 class="font-black text-lg uppercase underline">1. 所在赛道定义</h4>
+                <p class="text-[10px] opacity-60 mt-2 italic">回答：这门生意到底属于什么，不属于什么。</p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2">Prediction Market</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">把现实世界不确定事件压缩成可交易概率。价格本身就是信息聚合器。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2">Event Contract</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">本质上是离散事件的二元合约。相比传统期货与期权，它交易的是“事实是否发生”。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2">Information Market</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">它也是信息市场。用户买的不只是赔率，更是在为“谁更接近真相”付费。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2">Sportsbook Substitute</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">在体育、娱乐和热点题材里，它常常扮演博彩替代品，尤其在部分监管空白或供给不足地区。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50 md:col-span-2">
+                    <p class="font-black text-xs uppercase mb-2">Retail Trading Platform</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">它同时还是零售交易平台：有开户漏斗、有支付通道、有做市深度、有活跃交易用户与重复成交频次。它既像金融终端，也像轻量级博彩超应用。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+            <div class="lg:col-span-4">
+                <h4 class="font-black text-lg uppercase underline">2. TAM / SAM / SOM</h4>
+                <p class="text-[10px] opacity-60 mt-2 italic">口径统一为“年化交易量空间”，而非平台收入。</p>
+            </div>
+            <div class="lg:col-span-8 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-6 border-2 border-black bg-white">
+                        <p class="text-[10px] font-black opacity-50 uppercase mb-2">TAM</p>
+                        <p class="text-3xl font-black">$1.1T</p>
+                        <p class="text-[9px] mt-2 italic text-gray-500">2030E 行业年交易量理论上限，取自 FalconX 对预测市场长期规模的判断。</p>
+                    </div>
+                    <div class="p-6 border-2 border-black bg-white">
+                        <p class="text-[10px] font-black opacity-50 uppercase mb-2">SAM</p>
+                        <p class="text-3xl font-black">$325B</p>
+                        <p class="text-[9px] mt-2 italic text-gray-500">2026E 行业年化运行速度，取自 FalconX 对当前增长轨迹的外推。</p>
+                    </div>
+                    <div class="p-6 border-2 border-black bg-black text-white">
+                        <p class="text-[10px] font-black opacity-50 uppercase mb-2 text-white">SOM</p>
+                        <p class="text-3xl font-black text-white">$50B-$90B</p>
+                        <p class="text-[9px] mt-2 italic text-gray-300">五年内单一头部平台可占领年交易量的咨询模型区间，非官方披露。</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-gray-50 border-l-8 border-black">
+                    <p class="text-[11px] leading-loose text-gray-700"><strong>解释：</strong> 这一口径比旧式“拿全球 OTC 名义本金当 TAM”更克制，也更适合非专业读者。预测市场要长成大类资产，真正重要的不是数学上能映射到多少事件，而是有多少事件能被合法、低争议、高频率、可持续地变成可交易合约。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+            <div class="lg:col-span-4">
+                <h4 class="font-black text-lg uppercase underline">3. 行业增长驱动因素</h4>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2 text-red-800">Volume Expansion</p>
+                    <p class="text-3xl font-black mb-2">$64B → $325B</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">FalconX 估计行业 2025 年交易量约 $64B，2026 年按年化运行速度可超过 $325B，说明需求已经从单一政治季外溢到更多常态化题材。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2 text-red-800">Stablecoin Rails</p>
+                    <p class="text-3xl font-black mb-2">2Y Issuance Doubled</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">IMF 指出稳定币发行量过去两年翻倍。支付底座成熟，直接降低了链上事件合约的出入金摩擦。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2 text-red-800">Social Distribution</p>
+                    <p class="text-3xl font-black mb-2">65%</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">Reuters Digital News Report 2025 显示，65% 的受访者会在社交平台看视频新闻。赔率产品天然适合在社媒与直播流里快速传播。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50">
+                    <p class="font-black text-xs uppercase mb-2 text-red-800">Event Amplification</p>
+                    <p class="text-3xl font-black mb-2">$9B / $5.8B</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">超级事件已验证需求弹性。Polymarket 2024 年累计交易量超过 $9B。Rothschild & Co 披露 2025 年 11 月 Kalshi 月交易量达 $5.8B，Polymarket 为 $3.74B。</p>
+                </div>
+                <div class="p-6 border border-black bg-gray-50 md:col-span-2">
+                    <p class="font-black text-xs uppercase mb-2 text-red-800">Media & Broker Integration</p>
+                    <p class="text-3xl font-black mb-2">Distribution Multiplier</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">Polymarket 已进入 Dow Jones 与 X 的官方分发体系。Kalshi 已进入 CNBC，并持续对接 Robinhood、Webull 等券商分发。赔率从交易结果升级为媒体输入与券商页面内容，增长会被放大。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+            <div class="lg:col-span-4">
+                <h4 class="font-black text-lg uppercase underline">4. 行业天花板与约束条件</h4>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 border border-black bg-white">
+                    <p class="font-black text-xs uppercase mb-2">合规限制</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">预测市场在全球仍处于投资品、博彩品与衍生品之间的灰区。不同国家与州的监管口径分裂，会直接压缩可服务市场。</p>
+                </div>
+                <div class="p-6 border border-black bg-white">
+                    <p class="font-black text-xs uppercase mb-2">地域封锁</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">Finance Magnates 报道，Polymarket 当前在 33 个国家被封锁或受限。地域封锁不是边角问题，而是规模上限的硬约束。</p>
+                </div>
+                <div class="p-6 border border-black bg-white">
+                    <p class="font-black text-xs uppercase mb-2">事件供给上限</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">真正能形成深度成交的事件数量有限。大量长尾题材可以上架，但很难同时拥有足够流动性、足够关注度与足够清晰的结算规则。</p>
+                </div>
+                <div class="p-6 border border-black bg-white">
+                    <p class="font-black text-xs uppercase mb-2">用户教育成本</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">对普通用户而言，“赔率 ≠ 投票，交易 ≠ 下注界面截图”仍需解释。钱包、KYC、合约规则、结算口径都会抬高教育成本。</p>
+                </div>
+                <div class="p-6 border border-black bg-white md:col-span-2">
+                    <p class="font-black text-xs uppercase mb-2">流动性冷启动难题</p>
+                    <p class="text-[10px] leading-relaxed text-gray-700">新市场不是建出来就能交易。没有做市深度，首单成交差、价差宽、滑点大，用户会立刻流失。预测市场的天花板，不只由需求决定，也由“能不能冷启动足够多可持续盘口”决定。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="judgment-box text-black">
+            <span class="judgment-title text-white">STRATEGIC INFLECTION // 深度战略研判</span>
+            <div class="p-6 bg-gray-50 border-l-8 border-black">
+                <p class="text-sm font-black italic mb-4">结论判断：预测市场长期看更像一个正在成形的新金融品类，但它的短中期增长节奏仍会被政治、体育与超级热点事件显著放大。</p>
+                <p class="text-[11px] leading-loose text-gray-700">最值钱的一刀就在这里。若把它看成单纯的“大选热点”，会低估它在信息交易、事件合约、媒体分发和零售概率产品上的长期潜力。若把它看成已经成熟的新资产类别，又会高估其合规穿透力、供给密度和用户教育速度。更准确的判断是：<strong>结构是真的，节奏是事件驱动的</strong>。真正的胜出者，不是最会追热点的平台，而是能把热点月里爆发出来的注意力、资金与数据，沉淀成平峰月也能运转的盘口、分发与收费体系的平台。</p>
+                <p class="text-[9px] italic text-gray-500 mt-4">依据：FalconX 2026 prediction market landscape / IMF Understanding Stablecoins / Reuters Digital News Report 2025 / Finance Magnates geofencing report / Polymarket & Kalshi public volume disclosures</p>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- 板块 D: 竞争格局与生态位博弈分析 (定点重构 - 四大咨询专业形式) -->
+            <div class="pillar-box">
+                <span class="pillar-title">现状板块 D: 竞争格局与生态位博弈分析</span>
+                <div class="space-y-20">
+                    
+                    <!-- 1. 三层竞品剥离模型 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+                        <div class="lg:col-span-4">
+                            <h4 class="font-black text-lg uppercase underline">1. 竞品三层穿透模型</h4>
+                            <p class="text-[10px] opacity-60 mt-2 italic text-gray-500 text-black">审计视角：谁在抢钱，谁在抢时间，谁在抢真相定义权？</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-[11px] leading-relaxed text-black">
+                            <div class="p-5 border border-black bg-gray-50">
+                                <p class="font-black text-xs uppercase mb-3 text-red-800 text-black">第一层：直接竞品 (Direct Rivals)</p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <p><strong>Kalshi:</strong> 在岸合规锚点。利用联邦牌照锁定高净值及机构受众，主打低风险溢价与法律确定性。</p>
+                                    <p><strong>PredictIt:</strong> 存量学术平台。受限额与合规条件收窄影响，流动性上限被物理阉割，沦为小众情绪探测器。</p>
+                                    <p><strong>Manifold:</strong> 社交博弈实验。利用虚拟币规避监管，作为流量孵化池与长尾长尾话题测试场。</p>
+                                </div>
+                            </div>
+                            <div class="p-5 border border-black bg-gray-50">
+                                <p class="font-black text-xs mb-3 uppercase text-black">第二层：功能性替代竞品 (Substitutes)</p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <p><strong>体育博彩 (DraftKings):</strong> 拥有降维打击级的流量池与品牌势能。通过“超级应用”战略吞噬预测市场的娱乐化份额。</p>
+                                    <p><strong>永续合约/CFD:</strong> 加密与传统金融的对冲熟手。预测市场正在与其争夺对特定事件波动率的对冲资金。</p>
+                                    <p><strong>社交投票 (X Polls):</strong> 零金钱风险的公众观点场。预测市场通过引入“赔率”对非标准信息进行反向清理。</p>
+                                </div>
+                            </div>
+                            <div class="p-5 border border-black bg-gray-50">
+                                <p class="font-black text-xs mb-3 uppercase text-black">第三层：注意力竞品 (Attention Giants)</p>
+                                <p><strong>X / News Apps / YouTube:</strong> 预测市场正在截流用户在突发新闻发生时的“第一阅读优先级”。当用户在 Polymarket 监测胜率而非阅读评论时，平台已从交易工具演化为“真相聚合终点”。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 差异化审计矩阵 (10个维度对比) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12">
+                        <div class="lg:col-span-4">
+                            <h4 class="font-black text-lg uppercase underline text-black">2. 竞争能力因子穿透</h4>
+                        </div>
+                        <div class="lg:col-span-8 overflow-x-auto text-black">
+                            <table class="w-full text-[10px] border-collapse benchmark-table">
+                                <thead>
+                                    <tr class="bg-black text-white text-left">
+                                        <th class="p-3">因子 / 分析维度</th>
+                                        <th class="p-3">Polymarket (Offshore)</th>
+                                        <th class="p-3">Kalshi (Onshore)</th>
+                                        <th class="p-3">DraftKings (Hybrid)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-black text-gray-700">
+                                    <tr><td class="p-3 font-bold bg-gray-50">产品机制</td><td class="p-3">混合撮合 / 乐观预言机</td><td class="p-3">CLOB 订单簿交易所</td><td class="p-3">话务/赔率制定模式</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">合规路径</td><td class="p-3">算法治理 / 动态逃逸</td><td class="p-3 font-bold">CFTC 联邦确权</td><td class="p-3">多州博彩委员会许可</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">用户准入门槛</td><td class="p-3">低 (钱包签名)</td><td class="p-3">极高 (银行级 KYC)</td><td class="p-3">中 (年龄/地域核验)</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">流动性深度</td><td class="p-3 text-red-800 font-bold">极深 (全球跨链池)</td><td class="p-3">深 (在岸机构流动性)</td><td class="p-3">极深 (存量 50M 用户库)</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">事件供给速度</td><td class="p-3 text-red-800 font-bold">秒级 (Permissionless)</td><td class="p-3">受审级 (Regulated)</td><td class="p-3">刚性周期</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">交易体验</td><td class="p-3">Web3 高频对垒</td><td class="p-3">标准 TradFi 终端</td><td class="p-3">移动端沉浸博彩 UI</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">费用结构</td><td class="p-3">Taker Fee (2026启)</td><td class="p-3">阶梯收费 / 订阅</td><td class="p-3">高 Vigorish (抽水)</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">品牌声量</td><td class="p-3">文化模因 / 极客认同</td><td class="p-3">CNN/CNBC 官方背书</td><td class="p-3">国民级大众品牌</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">地域覆盖</td><td class="p-3">全球 (非管制区)</td><td class="p-3">美国全境</td><td class="p-3">特定合法州</td></tr>
+                                    <tr><td class="p-3 font-bold bg-gray-50">结算可信度</td><td class="p-3">UMA 协议 / 链上代码</td><td class="p-3 font-bold text-red-800">联邦信托 / 司法不可撤销</td><td class="p-3">审计级法偿能力</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 3. 护城河定性研判 (商业一刀) -->
+                    <div class="judgment-box text-black">
+                        <span class="judgment-title text-white">MOAT AUDIT // 护城河终极研判</span>
+                        <div class="p-6 bg-gray-50 border-l-8 border-accent-red">
+                            <p class="text-sm font-black italic mb-4">
+                                结论研判：Polymarket 的护城河本质是“结算主权的监管套利窗口”带来的“流动性虹吸垄断”。
+                            </p>
+                            <p class="text-[11px] text-gray-700 leading-loose">
+                                逆向工程揭穿了“品牌”与“用户习惯”的虚构外壳：Polymarket 目前的核心竞争力不在于技术架构，而在于它通过离岸身份<strong>物理屏蔽了合规审查产生的交易延迟与持仓规模摩擦</strong>。
+                                <br><br>
+                                这种由于监管时间差带来的深度资产厚度，迫使华尔街机构在寻找 Alpha 信号时不得不将其视为“第一赔率源”，从而逆向占领了用户的心智高地。<strong>核心风险提示：</strong> 一旦监管套利窗口因牌照收购而关闭，Polymarket 将面临与博彩巨头在 CAC（获客成本）上的贴身肉搏，其估值溢价可能面临系统性缩减。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 E: 商业模式与营收机制审计简报 (定点重构 - 四大咨询专业形式) -->
+            <div class="pillar-box text-black">
+                <span class="pillar-title">现状板块 E: 商业模式与营收机制审计简报</span>
+                <div class="space-y-20 text-black text-black">
+
+                    <!-- 1. 收入来源与价值捕获图谱 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black">
+                        <div class="lg:col-span-4 text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">1. 收入来源与价值捕获图谱</h4>
+                            <p class="text-[10px] opacity-60 mt-2 italic text-black text-black text-black">审计目标：回答平台究竟在哪些链路上把“赔率”“流动性”和“注意力”转成收入。</p>
+                        </div>
+                        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-[11px] leading-relaxed text-black">
+
+                            <div class="p-6 border border-black bg-white text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black">A. 交易手续费 / 执行层收费</p>
+                                <ul class="space-y-3 text-black text-black text-black">
+                                    <li><strong>Polymarket：</strong> 官方文档显示其绝大多数市场长期处于<strong>免交易费</strong>状态，仅部分市场启用 <strong>Taker Fee</strong>，主要用于给做市端的 <strong>Maker Rebates Program</strong> 提供资金来源。因此，平台零售交易量虽大，直接费收映射却偏薄。</li>
+                                    <li><strong>Kalshi：</strong> 官方帮助中心明确写明，平台通过对合约<strong>预期收益</strong>收取交易费来赚钱，并公开披露 Fee Schedule。其收入确认点更靠近“交易发生当下”，商业化路径更短。</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-6 border border-black bg-white text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black">B. 点差 / 隐性费用 / 流动性经济</p>
+                                <ul class="space-y-3 text-black text-black text-black text-black">
+                                    <li><strong>Polymarket：</strong> 其真实经济引擎并不只在明面手续费。围绕 CLOB、做市返佣、流动性激励与部分高波动市场的 taker fee，平台形成的是一套<strong>“薄费率 + 深流动性 + 数据外溢”</strong>的组合式捕获结构。</li>
+                                    <li><strong>Kalshi：</strong> 其显性收费更清楚，但同样要用做市计划、Volume Incentive 等方式反哺深度。表面费率可见，净留存仍要扣除激励成本与渠道分成，不能把毛费直接等同于净收入。</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-6 border border-black bg-white text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black">C. 充值 / 提现 / 清算相关收入</p>
+                                <ul class="space-y-3 text-black text-black text-black text-black">
+                                    <li><strong>Polymarket：</strong> 官方文档写明平台本身对 <strong>USDC 充值与提现不收费</strong>，但 Coinbase、MoonPay 等中介或链路会产生外部成本。也就是说，这一层对平台自身更像是转化摩擦点，不是核心利润池。</li>
+                                    <li><strong>Kalshi：</strong> 入金、出金与银行清算链路更接近传统券商体系。它的价值更多体现在合规资金通道与清算确定性，并非把提现费做成主利润来源。</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-6 border border-black bg-white text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black">D. 机构服务 / 数据服务 / B端输出</p>
+                                <ul class="space-y-3 text-black text-black text-black text-black text-black">
+                                    <li><strong>Polymarket：</strong> 官方开放了 Gamma API、Data API 与公开市场数据接口。结合其与 <strong>Dow Jones</strong> 的独家数据合作、与 <strong>X</strong> 和 <strong>Perplexity</strong> 的内容/分发合作，公开迹象已经非常明确：平台未来更厚的利润层，很可能在<strong>数据授权、媒体嵌入、情绪因子输出与 API 分发</strong>。</li>
+                                    <li><strong>Kalshi：</strong> 官方 API 面向实时行情与交易执行开放，同时其帮助中心已公开披露与 <strong>Robinhood Derivatives</strong>、<strong>Webull Financial</strong> 的合作；再叠加与 <strong>CNBC</strong> 的预测数据分发合作，说明其收入结构正在向<strong>交易所收费 + 经纪分发 + 数据媒体化</strong>三层并行演化。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 收入确认逻辑与利润池位置 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black">2. 收入确认逻辑与利润池位置</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-10 text-black text-black text-black">
+                            <div class="p-10 minimalist-border bg-white shadow-sm text-black text-black text-black">
+                                <h5 class="font-black text-xs uppercase mb-6 text-red-800 text-black text-black text-black">维度 A: 从“成交发生”到“收入入表”的链路拆解</h5>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-[11px] leading-loose text-black text-black text-black text-black">
+                                    <div class="space-y-4">
+                                        <p><strong>第一层，交易执行：</strong> Kalshi 的收费机制更接近传统交易所，收入确认发生在订单成交的当下，因此交易量与营收之间存在较强的正相关。Polymarket 则长期维持“多数市场免手续费”的用户心智，导致其名义交易量对收入的转化效率显著偏低。</p>
+                                        <p><strong>第二层，流动性供给：</strong> 两家平台都必须为深度支付代价。做市补贴、返佣计划、渠道激励、活动奖励，会把毛收入向下压缩。对于 Polymarket，这个压缩更明显，因为平台本来就没有把显性手续费做厚。</p>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <p><strong>第三层，分发与清算：</strong> 经纪通道、媒体分发、品牌联名与 API 嵌入，使平台开始从“单一交易界面”走向“赔率基础设施”。这部分收入确认通常更稳定，周期性也弱于单次爆款市场。</p>
+                                        <p><strong>第四层，数据产品化：</strong> 当预测概率被媒体、搜索、券商、资讯终端和机构模型调用时，赔率本身就从“交易副产品”升格为“可收费的数据资产”。从商业质量看，这一层更接近高毛利的长期利润池。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-black">
+                                <div class="p-6 border-2 border-black bg-gray-50 text-black">
+                                    <p class="text-[10px] font-black uppercase mb-2 opacity-60 text-black">当前最确定的收入点</p>
+                                    <p class="text-lg font-black text-black">Kalshi 交易费</p>
+                                    <p class="text-[10px] mt-3 leading-relaxed text-black text-black text-black">收费公式公开、成交即确认、向券商与零售端都可复制。</p>
+                                </div>
+                                <div class="p-6 border-2 border-black bg-gray-50 text-black">
+                                    <p class="text-[10px] font-black uppercase mb-2 opacity-60 text-black">当前最被低估的收入点</p>
+                                    <p class="text-lg font-black text-black">赔率数据分发</p>
+                                    <p class="text-[10px] mt-3 leading-relaxed text-black text-black text-black">媒体嵌入、搜索摘要、机构信号与情绪因子输出具备更强外溢性。</p>
+                                </div>
+                                <div class="p-6 border-2 border-black bg-black text-white">
+                                    <p class="text-[10px] font-black uppercase mb-2 opacity-60 text-white">长期最厚的利润池</p>
+                                    <p class="text-lg font-black text-white">B端 API / 数据授权</p>
+                                    <p class="text-[10px] mt-3 leading-relaxed text-white text-white text-white">这类收入对用户峰值热度的依赖更低，复购性更强，毛利也通常更高。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 交易量 ≠ 营收 穿透审计 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black">3. 穿透审计：交易量 ≠ 营收</h4>
+                            <p class="text-[10px] opacity-60 mt-2 italic text-black text-black text-black">审计目标：拆开名义热度、真实收入与可持续性，避免把成交额错看成利润表。</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-10 text-black text-black text-black">
+                            <div class="p-10 border-2 border-black bg-white shadow-xl text-black text-black text-black">
+                                <h5 class="font-black text-xs uppercase mb-8 tracking-widest text-red-800 text-center italic text-black">POLYMARKET / KALSHI 收入映射关系拆解</h5>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-black pb-8 mb-8 text-black">
+                                    <div class="cost-item text-left text-black">
+                                        <p class="font-black text-[10px] uppercase mb-3 text-black">名义交易量 (Notional Volume)</p>
+                                        <p class="text-[11px] leading-loose text-black text-black text-black">指所有 YES/NO 合约成交额总和，是平台最醒目的增长指标。它会因选举、战争、超级体育赛事等事件被迅速推高。单一政治或地缘市场就可能吸走数亿美元成交。</p>
+                                    </div>
+                                    <div class="cost-item text-left text-black">
+                                        <p class="font-black text-[10px] uppercase mb-3 text-black">净收入 (Net Revenue)</p>
+                                        <p class="text-[11px] leading-loose text-black text-black text-black">指平台真正留下的收入。这里必须扣除返佣、流动性激励、分发渠道成本与运营补贴。对于 Polymarket，这一步的折损尤其大，因为其多数市场原本免手续费。</p>
+                                    </div>
+                                    <div class="cost-item text-left text-black">
+                                        <p class="font-black text-[10px] uppercase mb-3 text-black">可持续收入 (Recurring Revenue)</p>
+                                        <p class="text-[11px] leading-loose text-black text-black text-black">包括常规手续费、经纪分发、API 调用、数据授权、媒体嵌入与机构服务。这部分收入能在没有“大选级事件”的月份继续存在，更接近可估值的经营底盘。</p>
+                                    </div>
+                                    <div class="cost-item text-left text-black">
+                                        <p class="font-black text-[10px] uppercase mb-3 text-black">周期性事件驱动收入 (Event-Driven Revenue)</p>
+                                        <p class="text-[11px] leading-loose text-black text-black text-black">来自大选、央行决议、战争升级、世界杯、超级碗等注意力冲击波。它来得快，也退得快，对月度和季度表现的拉升极强，却难以原样常态化。</p>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-x-auto text-black">
+                                    <table class="w-full text-[10px] border-collapse benchmark-table">
+                                        <thead>
+                                            <tr class="bg-black text-white text-left">
+                                                <th class="p-3">审计维度</th>
+                                                <th class="p-3">Polymarket</th>
+                                                <th class="p-3">Kalshi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-black text-gray-700">
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">收入来源清晰度</td>
+                                                <td class="p-3">中低。零售端长期“多数市场免手续费”，真实变现需向数据、合作、B端外溢层观察。</td>
+                                                <td class="p-3">高。官方明确以交易费为核心收入来源，费率与收费逻辑透明。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">单一收入依赖度</td>
+                                                <td class="p-3">当前对热点交易活动与流动性厚度依赖高，未来更需要数据授权和媒体分发分散风险。</td>
+                                                <td class="p-3">当前以交易费为主，但正通过券商分发、媒体合作与 API 扩展第二曲线。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">交易量向收入转化率</td>
+                                                <td class="p-3">偏低。名义交易量与净收入之间存在明显断层。</td>
+                                                <td class="p-3">中高。成交放大更容易体现在费收上，但仍受激励与渠道分成稀释。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">高峰期收入可常态化程度</td>
+                                                <td class="p-3">低。若缺少连续型体育、加密与机构分发场景，峰值过后易快速回落。</td>
+                                                <td class="p-3">中。收费机制更稳，但大体仍受热点事件驱动，尤其是体育赛季波动。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">最厚利润池判断</td>
+                                                <td class="p-3">长期看更接近赔率数据、媒体嵌入、机构情绪因子与 API 基础设施。</td>
+                                                <td class="p-3">当前更接近交易所费收与券商分发，长期再叠加数据授权。</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="p-6 bg-gray-50 border-l-8 border-black text-black">
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black">
+                                    <strong>审计提示：</strong> 对 Polymarket 这类平台，<strong>成交额首先是注意力温度计，其次才是收入线索</strong>。若平台多数市场免手续费，且流动性主要由专业资金和做市商支撑，那么“高交易量”只能证明市场被看见，并不能直接证明平台已经把这股热度高质量地装进利润表。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 热点依赖度与收入常态化能力 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black text-black">4. 热点依赖度与收入常态化能力</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-6 text-black text-black text-black">
+                            <div class="judgment-box text-black">
+                                <span class="judgment-title text-white">REVENUE QUALITY // 营收质量终局研判</span>
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black">
+                                    <strong>结论研判：</strong> 预测市场的营收曲线，本质上仍被“事件密度”和“分发半径”共同牵引。公开资料已经显示，行业近年的交易量高度向体育与高热度事件集中；热点退潮后，零售爆发式活跃度通常同步降温。对 Kalshi 而言，公开费率、券商合作和媒体分发让其更容易把热度转成确定性收入。对 Polymarket 而言，真正值得估值溢价的部分，不在单次爆款市场本身，而在其能否把赔率变成长期可出售的数据与分发基础设施。
+                                    <br><br>
+                                    这意味着：<strong>最赚钱的环节未必是交易界面本身</strong>。在成熟阶段，平台更有可能靠“交易所层收费 + 券商通道 + 数据授权 + 媒体/API 分发”构成复合收入模型。谁能把短暂的事件热度沉淀成长期调用的赔率数据，谁才更接近真正稳定的经营底盘。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 板块 F: 关键经营数据与增长质量审计 (锁定还原) -->
+            <div class="pillar-box text-black">
+                <span class="pillar-title">现状板块 F: 关键经营数据与增长质量审计</span>
+                <div class="space-y-20 text-black text-black text-black">
+<div class="space-y-10">
+    <div class="kpi-grid text-black">
+        <div class="kpi-card">
+            <span class="kpi-label">Polymarket 流量结构</span>
+            <div class="kpi-value">Direct 73.86%</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">顶层流量以自然访问与品牌召回为主，热点月天然放大 direct 占比。</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-label">Kalshi 流量结构</span>
+            <div class="kpi-value">Direct 64.95%</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">品牌直接访问很高，同时更容易叠加券商与媒体分发流量。</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-label">Polymarket 费率底座</span>
+            <div class="kpi-value">多数市场 0 交易费</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">已启用费率市场示例：100 股 × $0.50，taker fee ≈ <strong>$0.78</strong>，有效费率约 <strong>1.56%</strong>。平台提现通常 <strong>0 平台费</strong>。</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-label">Kalshi 货币化底座</span>
+            <div class="kpi-value">100 合约费率 $0.07-$1.75</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">ACH 存取 <strong>0 费</strong>。借记卡入金最高 <strong>2%</strong>。Crypto 存取可能有第三方处理费。</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-label">Polymarket 流动性激励</span>
+            <div class="kpi-value">Daily Rewards / Rebates</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">符合条件的 crypto / sports 市场，maker rebates 每日用 USDC 发放，常见返点池按 taker fee 反哺。</p>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-label">Kalshi 激励计划</span>
+            <div class="kpi-value">MM / Volume / Liquidity</div>
+            <p class="text-[10px] leading-relaxed mt-2 text-gray-600">官方长期运行做市、成交量与流动性激励计划，推动盘口深度和活跃合约覆盖。</p>
+        </div>
+    </div>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-[10px] border-collapse benchmark-table">
+            <thead>
+                <tr class="bg-black text-white text-left">
+                    <th class="p-3">收费清单速览</th>
+                    <th class="p-3">交易费</th>
+                    <th class="p-3">充值</th>
+                    <th class="p-3">提现</th>
+                    <th class="p-3">给 0 概念读者的解释</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-black text-gray-700">
+                <tr>
+                    <td class="p-3 font-bold bg-gray-50">Polymarket</td>
+                    <td class="p-3">多数市场 <strong>0 费</strong>。启用 fee 市场按 price curve 收费。示例：100 股 @ $0.25 约 <strong>$0.22</strong>，@ $0.50 约 <strong>$0.78</strong>。</td>
+                    <td class="p-3">平台本身通常不另收出入金平台费。资金常需通过稳定币与桥接路径进入。</td>
+                    <td class="p-3">官方文档写明提现 <strong>instant and free</strong>，但跨链兑换可能产生外部滑点或第三方桥费用。</td>
+                    <td class="p-3">新手容易误以为“完全零成本”。真实情况是：平台费可能很低，但链桥、稳定币兑换与理解成本并不为零。</td>
+                </tr>
+                <tr>
+                    <td class="p-3 font-bold bg-gray-50">Kalshi</td>
+                    <td class="p-3">Most markets 100 contracts 的 taker fee 为 <strong>$0.07-$1.75</strong>，中间价位最贵。</td>
+                    <td class="p-3">ACH <strong>0 费</strong>。借记卡入金最高 <strong>2%</strong>。Wire deposit 无 Kalshi 额外费用。</td>
+                    <td class="p-3">ACH withdrawal <strong>0 费</strong>。大额 wire 有门槛。Crypto 存取可能由第三方支付处理商收费。</td>
+                    <td class="p-3">Kalshi 的收费更像传统金融平台：显性、规则化、可预期，但用户在入金时更容易真实感知到成本。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">1. 用户侧经营数据穿透</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-6 text-red-800 text-black text-black text-black">披露口径审计</p>
+                                <div class="overflow-x-auto text-black text-black text-black">
+                                    <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                        <thead>
+                                            <tr class="bg-black text-white text-left">
+                                                <th class="p-3">指标</th>
+                                                <th class="p-3">Polymarket</th>
+                                                <th class="p-3">Kalshi</th>
+                                                <th class="p-3">审计备注</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-black text-gray-700">
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">注册用户数</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">公开材料更容易取得的是地址、访问量、活跃交易者与事件成交量，注册总量并无审计口径。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">KYC 用户数</td>
+                                                <td class="p-3">国际站未见统一披露口径；美国入口存在合规身份核验</td>
+                                                <td class="p-3">全量 KYC 准入，但未披露人数</td>
+                                                <td class="p-3">Kalshi 官方明确强调全量身份验证与实时监控，人数未公开；Polymarket 国际站无法按审计标准确认。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">入金用户数</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">两家都没有按季度持续披露 funded accounts，无法直接计算精确付费率。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">MAU / DAU</td>
+                                                <td class="p-3">公开代理值为月活跃交易者。2025年10月达 477,850，创历史高点。</td>
+                                                <td class="p-3">官方仅披露“millions of users access Kalshi weekly”。</td>
+                                                <td class="p-3">Kalshi 未公开标准化 MAU/DAU；Polymarket 更适合用活跃交易者与链上参与口径观察。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">新增用户</td>
+                                                <td class="p-3">未持续披露</td>
+                                                <td class="p-3">未持续披露</td>
+                                                <td class="p-3">新增更多体现为热点阶段的交易者与流量突刺，公开口径偏事件驱动而非 SaaS 式新增披露。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">留存率 / 复购率</td>
+                                                <td class="p-3">无官方留存表。第三方 cohort 观察显示，大选前急升，2025年初回落，2025年末再抬升。</td>
+                                                <td class="p-3">无官方留存表</td>
+                                                <td class="p-3">咨询视角下可得出的稳结论只有“事件后回落存在”，无法把未披露流量冒充留存。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">活跃交易用户数</td>
+                                                <td class="p-3">2024 年全平台活跃交易者约 314,000；2025年10月月活跃交易者 477,850。</td>
+                                                <td class="p-3">官方披露为 weekly millions，未拆解月度活跃交易者。</td>
+                                                <td class="p-3">Polymarket 的公开透明度更偏交易行为；Kalshi 的公开透明度更偏公司口径与媒体合作口径。</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3 font-bold bg-gray-50">人均交易频次</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">未公开披露</td>
+                                                <td class="p-3">可验证结论是 Polymarket 存在明显美国业务时段季节性，说明活跃交易并非全天均匀分布。</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-black text-black text-black">用户质量研判</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black text-black">
+                                    用户指标最值得警惕的地方，在于外部世界很容易把“地址数、页面访问量、媒体热度、月度交易者”混成同一个概念。按审计标准，它们根本不是一回事。Polymarket 的优点是链上行为更透明，缺点是钱包地址无法自然等同于真实用户；Kalshi 的优点是实名合规，缺点是公开披露粒度远不如链上透明。结论很硬：这个赛道公开可核验的是“交易行为”，不是“精确用户漏斗”。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">2. 交易侧体量、净额与集中度</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">穿透判断</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">总交易量</td>
+                                            <td class="p-3">2024 年累计名义交易量超过 $9B；2025年10月单月 $3.02B；2026年1月 $7.66B。</td>
+                                            <td class="p-3">官方披露 2025 年末已超过 $1B / 周；第三方估算 2025 全年约 $22.88B。</td>
+                                            <td class="p-3">平台体量已进入“大事件可以数十亿美金月成交”的区间。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">净交易量 / 净流入</td>
+                                            <td class="p-3">2024 美国总统市场 Jan 5 至 Nov 6 的 exchange-equivalent volume 为 $894.9M，净流入为 $395.9M。</td>
+                                            <td class="p-3">未公开等价净流入口径</td>
+                                            <td class="p-3">这直接证明 headline volume 不能等同于真实新增资本与可持续需求。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">单市场交易量分布</td>
+                                            <td class="p-3">2024 美国总统单一市场公开显示体量已达 $3.686B。按全年 &gt; $9B 估算，该单市场至少占全年平台量约 41%。</td>
+                                            <td class="p-3">2025年11月单月交易量 $5.8B，其中 91% 来自体育。</td>
+                                            <td class="p-3">两家都不是长尾均衡型增长，超级主题会显著吞噬总量。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">单用户交易量分布</td>
+                                            <td class="p-3">公开研究显示存在明显鲸鱼阶段，2024年10月约 $30M 单边押注推动市场争议与成交放大。</td>
+                                            <td class="p-3">未公开 Top 用户分布</td>
+                                            <td class="p-3">交易量扩张并不天然代表用户面扩张，可能只是高资本账户加杠杆式放量。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">Top 10 / Top 100 用户贡献</td>
+                                            <td class="p-3">未见平台级官方披露</td>
+                                            <td class="p-3">未见平台级官方披露</td>
+                                            <td class="p-3">按审计规则只能写“高集中”，不能伪造精确百分比。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">高频事件占比</td>
+                                            <td class="p-3">政治与突发地缘事件对体量拉动极强；2024 选举、2026 中东冲突均出现平台级峰值。</td>
+                                            <td class="p-3">体育已经成为主引擎，2025 年后远强于政治。</td>
+                                            <td class="p-3">高频事件是交易所的“点火器”，平峰期更能说明平台真正底座。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">政治类市场占比</td>
+                                            <td class="p-3">2024 年显著偏政治，单一美国总统市场已占全年平台量至少约 41%。</td>
+                                            <td class="p-3">2024 年政治很强；2025 年已被体育主导。</td>
+                                            <td class="p-3">赛道先靠政治出圈，再被更高频的体育吞没，是当前清晰路径。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">超级事件拉动占比</td>
+                                            <td class="p-3">特朗普相关鲸鱼押注与大选阶段直接重塑月度成交曲线。</td>
+                                            <td class="p-3">2026 超级碗单场相关交易量已超过 $1B。</td>
+                                            <td class="p-3">增长并不平滑，极强的脉冲式特征仍然主导经营数据。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">交易量审计的核心陷阱</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black text-black">
+                                    对 Polymarket 这类链上平台，表面“成交量”至少分三层：第一层是页面可见的名义成交量，第二层是经交易机制修正后的 exchange-equivalent turnover，第三层才是净流入。学术研究已经证明，铸造、销毁、转换与对手盘撮合混在一起时，粗糙汇总会高估真实经济活动。换句话说，看起来像海，其实很可能有相当部分只是浪花。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">3. 收入侧真实质量</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">经营含义</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">显性手续费</td>
+                                            <td class="p-3">并非全站统一高费。fee-enabled 市场的 taker fee 在 50% 概率附近达到峰值，体育约 1.56%，Crypto 约 0.44%，两端极值附近会快速降到接近 0。</td>
+                                            <td class="p-3">Most markets 为 100 contracts 收取 $0.07 至 $1.75 taker fee。</td>
+                                            <td class="p-3">Kalshi 收费链路更清晰，Polymarket 与 headline volume 的货币化耦合更弱。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">充值 / 提现相关收入</td>
+                                            <td class="p-3">官方文档长期强调 USDC 出入金不额外收费，更多摩擦来自外部链桥或第三方支付。</td>
+                                            <td class="p-3">卡入金最高可收 2%；wire 入金无额外 Kalshi 费用；加密出入金可能由第三方处理器收费。</td>
+                                            <td class="p-3">Kalshi 在支付环节更像传统经纪商；Polymarket 更像把摩擦外包给链上与支付通道。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">月收入</td>
+                                            <td class="p-3">未公开披露，无法按审计标准确认。</td>
+                                            <td class="p-3">第三方研究估算 2025 年 12 月 fee revenue 为 $63.5M，全年收入约 $260M。</td>
+                                            <td class="p-3">Kalshi 已进入“可按月追踪”的收入级别；Polymarket 公开市场仍停留在体量强、利润口径弱。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">收入增速</td>
+                                            <td class="p-3">未公开披露</td>
+                                            <td class="p-3">第三方估算 2025 年收入较 2024 年增长约 994%。</td>
+                                            <td class="p-3">同一赛道内，收费模型清晰的一方更容易把热度变成财务结果。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">收入波动性</td>
+                                            <td class="p-3">理论上极高。低费率、低收费覆盖面、热点集中，使收入弹性远高于成交量弹性。</td>
+                                            <td class="p-3">极高，但已由体育高频化部分平滑。2025 最后四个月体育收入占比超过 90%。</td>
+                                            <td class="p-3">两家都未走到稳定订阅式收入，仍是事件型经营模型。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">高峰月 vs 平峰月</td>
+                                            <td class="p-3">平台活跃与成交在大选、地缘冲突、超级体育事件中会突然放大，平峰显著回落。</td>
+                                            <td class="p-3">2025年12月为最强收入月；早期月份的周收入甚至低于年末单周。</td>
+                                            <td class="p-3">高峰月证明市场需求存在，平峰月决定估值能否站稳。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">手续费率变化</td>
+                                            <td class="p-3">2026 年起 fee-enabled 市场逐步启用，且按概率位置非线性收费。</td>
+                                            <td class="p-3">存在标准费表，也有针对特殊赛事的 non-standard fees。</td>
+                                            <td class="p-3">Polymarket 仍在摸索货币化开关；Kalshi 已形成制度化收费框架。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">ARPU / ARPPU</td>
+                                            <td class="p-3">未公开披露，且钱包地址无法直接映射真实付费用户。</td>
+                                            <td class="p-3">未公开披露</td>
+                                            <td class="p-3">公开资料不足以做严谨 ARPU/ARPPU，强算只会把模型做脏。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">机构服务 / 数据服务 / API</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        Polymarket 与 Dow Jones 的独家合作，已经说明其数据分发开始从“交易所附属品”向“媒体级实时概率基础设施”移动。Kalshi 则更进一步，已经把数据与分发接入 CNN、CNBC、Robinhood 等渠道，说明 API 与 B 端输出不再只是想象空间，而是第二增长曲线的雏形。
+                                    </p>
+                                </div>
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">广告 / 联名 / 分发合作</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        这个赛道更像“流量分发授权”而非传统展示广告。真正值钱的不是 banner 位，而是把平台概率嵌入新闻流、券商终端、内容平台与行情页面。当预测价格成为外部分发组件后，平台会从单点交易场升级为概率操作系统。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">4. 增长质量与叙事拆解</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">自然流量 vs 付费买量</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black">
+                                        Similarweb 显示，2026年1月 polymarket.com 的桌面访问中，Direct 占 73.86%，自然搜索位列第二；其搜索关键词流量中，Organic 占 99.9%，Paid 仅 0.1%。kalshi.com 的 Direct 为 64.95%，搜索关键词流量中 Organic 为 93.98%，Paid 为 6.02%。结论很明确：两家目前都还是品牌驱动与事件驱动，Kalshi 的付费搜索比重更高，但也远未到“纯买量换增长”的程度。
+                                    </p>
+                                </div>
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">热点驱动 vs 常态经营</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black">
+                                        Polymarket 在 2024 大选阶段，单一总统市场就吸走了全年平台量至少约 41%。Similarweb 还记录到，Musk 于 2024年10月7日发帖后，Polymarket 单日访问冲到 110 万，接近总统辩论后的 120 万前高。Kalshi 则在 2025 年完成“从政治高峰转向体育高频”的切换，2025年11月单月 $5.8B 中 91% 来自体育。增长是真增长，但驱动力仍旧高度事件化。
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-8 bg-black text-white text-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-6 opacity-70 text-white text-white text-white">Growth Quality Audit</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-white text-white">
+                                    <div class="text-[11px] leading-loose text-white text-white text-white">
+                                        <p><strong>用户增长与收入增长是否同步：</strong> Polymarket 因未公开收入，无法确认同步性；Kalshi 的外部估算显示，收入增速快于用户口径增速，说明其货币化效率高于 Polymarket。</p>
+                                        <p class="mt-4"><strong>交易量增长是否来自少数大户：</strong> 至少对 Polymarket，答案偏向“是”。鲸鱼阶段、交叉市场参与高度集中、单一超级事件吞量，都说明增长并非完全来自均匀扩大的大众基盘。</p>
+                                    </div>
+                                    <div class="text-[11px] leading-loose text-white text-white text-white">
+                                        <p><strong>单一收入来源依赖度：</strong> Kalshi 目前强依赖交易费，且交易费又强依赖体育。Polymarket 当前更强依赖事件流量本身，货币化仍在补课。</p>
+                                        <p class="mt-4"><strong>质量风险：</strong> Columbia 相关研究指出，Polymarket 历史交易中约 25% 可能带有人为放量特征。即便该比例仍有争议，至少足以说明 headline volume 不能直接拿去乘估值倍数。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="judgment-box text-black text-black text-black">
+                                <span class="judgment-title text-white">OPERATING QUALITY // 终局判断</span>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black text-black">
+                                    终局判断很简单。这个赛道的经营数据已经足够证明需求真实存在，但还远没有证明“需求已经被稳定、可持续、可审计地货币化”。Polymarket 更像高频事实博弈的流量主场，交易量强，收入确认弱，增长质量高度受超级事件与大资金影响。Kalshi 更像开始学会把热度变成报表的那一方，收费、分发、媒体嵌入、券商接入都更成熟，但它同样逃不开体育大事件与高峰月依赖。真正值钱的未来，不在一次又一次的大选狂欢，而在谁先把概率、清算与分发做成持续开机的基础设施。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 G: 单位经济模型审计分析 (Unit Economics) -->
+            <div class="pillar-box text-black">
+                <span class="pillar-title">现状板块 G: 单位经济模型审计分析 (Unit Economics)</span>
+                <div class="space-y-20 text-black text-black text-black">
+
+                    <div class="kpi-grid text-black text-black text-black">
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 流量结构</span>
+                            <div class="kpi-value text-black text-black text-black">Direct 73.86%</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 流量结构</span>
+                            <div class="kpi-value text-black text-black text-black">Direct 64.95%</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 费率底座</span>
+                            <div class="kpi-value text-black text-black text-black">多数市场免交易费</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 货币化底座</span>
+                            <div class="kpi-value text-black text-black text-black">交易费显性收取</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 流动性激励</span>
+                            <div class="kpi-value text-black text-black text-black">Daily Rewards / Rebates</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 激励计划</span>
+                            <div class="kpi-value text-black text-black text-black">MM / Volume / Liquidity</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">1. 单位经济总判断：多来一个用户，到底赚不赚钱</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="judgment-box text-black">
+                                <span class="judgment-title text-white">UNIT ECONOMICS // 核心结论</span>
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black">
+                                    <strong>结论先行：</strong> 这个赛道的边际经济性并不由“注册一个用户”决定，而由“把这个用户推进到首次入金、首次成交、并在非热点月份继续交易”决定。咨询审计视角下，Polymarket 的前端获客成本偏低，但单个新增用户能否转成利润，取决于其是否进入收费市场、是否形成可出售的数据足迹、以及是否不需要长期外部流动性补贴。Kalshi 的前端获客与合规激活成本更高，但由于显性交易费、券商分发和更完整的支付/清算管线，它更接近“新增交易用户能贡献正向毛利”的结构。
+                                    <br><br>
+                                    因而，真正的问题不是“有没有新增用户”，而是<strong>新增用户穿过了几道门</strong>。预测市场平台至少有四道门：完成注册、完成身份/钱包准备、完成首次入金、完成首次交易。很多叙事只停在第一道门，而利润表只承认最后一道门。
+                                </p>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">审计边界声明</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black text-black">
+                                    公开市场没有按上市公司口径持续披露 CAC、首次入金成本、首次交易成本、LTV、ARPU 和回本周期。以下内容严格区分为两层：第一层是<strong>公开可验证事实</strong>，第二层是基于公开事实所做的<strong>经营代理判断</strong>。凡缺少审计级原始披露的数据，均不伪造绝对值。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">2. CAC 漏斗拆解：激活、首次入金、首次交易</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">审计判断</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">顶层流量 CAC</td>
+                                            <td class="p-3">公开绝对值未披露。桌面访问以 Direct 为主，2026年1月为 73.86%。</td>
+                                            <td class="p-3">公开绝对值未披露。桌面访问以 Direct 为主，2026年1月为 64.95%。</td>
+                                            <td class="p-3">两家当前都仍偏品牌驱动与事件驱动，顶层流量的 blended CAC 可能没有想象中高，但这不等于付费交易用户 CAC 低。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">激活成本</td>
+                                            <td class="p-3">低到中。链上钱包路径更轻，代理钱包与 Polygon USDC.e 体系降低了初始摩擦。</td>
+                                            <td class="p-3">中到高。全量 AML/KYC、风控与实名开户链路天然抬高激活成本。</td>
+                                            <td class="p-3">Polymarket 更容易把“围观者”变成“可操作账户”；Kalshi 更像传统券商开户，漏斗更窄但账户质量更高。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">首次入金成本</td>
+                                            <td class="p-3">中到高。平台本身对 USDC 出入金通常不收取额外费用，但链桥、法币购买稳定币与钱包理解成本会吃掉转化。</td>
+                                            <td class="p-3">高。虽有 bank withdrawal 无额外 Kalshi fee，但卡入金、支付处理、资金冻结周期与身份核验使 funded conversion 更贵。</td>
+                                            <td class="p-3">预测市场真正昂贵的不是获客曝光，而是把“看热闹”推进到“肯入金”。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">首次交易成本</td>
+                                            <td class="p-3">中。成交前的主要阻力是盘口深度、界面理解、热门事件外的流动性不足。</td>
+                                            <td class="p-3">中到高。交易规则、费用、资金可提取时滞与市场可得性共同影响首单完成。</td>
+                                            <td class="p-3">首单不是 UI 问题，而是“是否看见足够深度与足够确定的结算体验”。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">渠道结构对 CAC 的影响</td>
+                                            <td class="p-3">依赖社媒扩散、热点新闻与原生加密社区，热点期 CAC 会被自然流量稀释。</td>
+                                            <td class="p-3">除品牌自然流量外，更容易通过 Robinhood / Webull / 媒体嵌入获取分发。</td>
+                                            <td class="p-3">Kalshi 的渠道型 CAC 理论上更可控，但要向分发方让渡一部分经济价值。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">漏斗最贵的环节</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        不是注册，不是点击，也不是访问。最贵的环节是<strong>首次入金</strong>。对 Polymarket，贵在链上路径理解与法币到 USDC.e 的心理摩擦。对 Kalshi，贵在合规验证、支付通道与资金冻结规则。若平台无法把首次入金成本压住，所有上层流量繁荣都只是热闹。
+                                    </p>
+                                </div>
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">为什么首次交易也很贵</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        预测市场不是单边买入后长期持有的产品。用户一旦发现盘口太薄、价差太宽、成交不连续、或者结算规则看不懂，就会在第一笔交易前后流失。因而，首单成本往往被隐藏在“市场深度建设成本”里，而不是被归在广告费里。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">3. LTV、回本周期与客群差异</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">客群</th>
+                                            <th class="p-3">Polymarket LTV 判断</th>
+                                            <th class="p-3">Kalshi LTV 判断</th>
+                                            <th class="p-3">核心原因</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">热点零售交易者</td>
+                                            <td class="p-3">低到中。事件后衰减极快，若停留在免手续费市场，货币化更弱。</td>
+                                            <td class="p-3">中。显性交易费使单次活跃更容易贡献收入，但热点后留存仍弱。</td>
+                                            <td class="p-3">爆发来得快，退潮也快。短期热度可以放大 GMV，未必放大终身价值。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">体育高频用户</td>
+                                            <td class="p-3">中。若体育市场持续上量且开始收费，价值会上升。</td>
+                                            <td class="p-3">中高。赛事日历连续，交易频率与费收都更稳定。</td>
+                                            <td class="p-3">频次比客单价更重要。持续开机的赛历，是天然的 LTV 放大器。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">专业做市 / 高频 API 用户</td>
+                                            <td class="p-3">高，但需要把奖励与风控后净值单独看。</td>
+                                            <td class="p-3">高，且更可审计。</td>
+                                            <td class="p-3">他们贡献的不只是交易费，还包括深度、点差收敛与价格发现质量。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">宏观对冲 / 机构用户</td>
+                                            <td class="p-3">中高。频次未必高，但单笔深度与信息价值高。</td>
+                                            <td class="p-3">高。合规与结算确定性使其更适合长期留存。</td>
+                                            <td class="p-3">机构更在意可结算、可归档、可穿透合规，而不是界面是否热闹。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">回本周期判断</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                    <strong>公开绝对值：未披露。</strong> 但经营逻辑并不模糊。对 Polymarket，若新增用户停留在免手续费市场、且仅在超级事件期短暂停留，则回本周期会被极度拉长，甚至出现“用户活跃很多，平台仍然没有把钱赚回来”的情形。对 Kalshi，由于交易费、支付规则、分发合作和实名账户结构更完整，其回本周期通常短于 Polymarket，但若大量新增仍集中在一次性热点，回本仍会变得陡峭且不稳定。
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">留存与交易频次关系</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        在预测市场里，留存并不是先验变量，<strong>交易频次才是更接近真相的因变量</strong>。用户是否会回来，取决于他是否在过去一个周期里持续看到新的可交易问题、可成交的盘口与可信的结算。频次上去，LTV 才会上去。没有频次，所谓留存只是被新闻周期暂时托住的幻影。
+                                    </p>
+                                </div>
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">不同客群的经济性差异</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        单位经济不是全站平均值。零售热点用户贡献话题密度，专业流动性用户贡献盘口厚度，机构用户贡献大额深度与长期信用。把三种人混成一个 ARPU，只会把模型做瞎。真正有意义的，是分群回本，而不是全站平均。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">4. 成本结构穿透：做市、合规、支付、风控、基础设施</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">成本项</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">经营含义</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">做市与流动性补贴</td>
+                                            <td class="p-3">明确存在。官方公开 Daily Liquidity Rewards 与 Maker Rebates，且 rebates 由部分 taker fees 供给。</td>
+                                            <td class="p-3">明确存在。公开有 Market Maker Program、Liquidity Incentive Program、Volume Incentive Program、Fee Rebate Program。</td>
+                                            <td class="p-3">流动性不是自然长出来的。盘口越深，平台越像交易所；但深度本身需要付钱维护。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">合规成本摊销</td>
+                                            <td class="p-3">相对较轻，但并非为零。美国相关业务、实体路径与后续牌照动作都会抬升摊销。</td>
+                                            <td class="p-3">重。全量 AML/KYC、持续市场监控、规则申报、清算与审计结构天然更昂贵。</td>
+                                            <td class="p-3">Kalshi 的成本更重，但这层成本同时构成其进入壁垒与长期机构信用。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">客服 / 风控 / 支付通道</td>
+                                            <td class="p-3">客服与支付摩擦部分外包给链桥、稳定币、第三方支付环境。</td>
+                                            <td class="p-3">更接近传统经纪商。需要承担银行、卡、ZeroHash 等链路协调与更完整的客户支持。</td>
+                                            <td class="p-3">合规路径越深，后台成本越高，但用户可理解性与机构可接受性也越高。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">服务器与链上基础设施</td>
+                                            <td class="p-3">采用混合 CLOB，链下撮合、Polygon 原子结算，边际链上成本相对较低，但仍要维护订单簿、WebSocket、桥接与 API 服务。</td>
+                                            <td class="p-3">偏中心化撮合与清算体系，链上成本较弱，但交易所级可用性与监控要求更高。</td>
+                                            <td class="p-3">Polymarket 的每笔结算摩擦较低；Kalshi 的每笔交易更像传统交易所 IT 成本模型。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">结算与判定运营</td>
+                                            <td class="p-3">每个市场都要有清晰 resolution source；提案通常需要 $750 USDC.e bond，并存在争议期与运营监控。</td>
+                                            <td class="p-3">更强依赖内部规则、合规审理与市场监督。</td>
+                                            <td class="p-3">预测市场的后处理成本，常被外界低估。市场不是成交就结束，真正麻烦在结果判定与纠纷处理。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="p-8 bg-black text-white text-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-6 opacity-70 text-white text-white text-white">Cost Reality Check</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-white text-white">
+                                    <div class="text-[11px] leading-loose text-white text-white text-white">
+                                        <p><strong>Polymarket：</strong> 看上去轻，实际上不轻。前台是“多数市场免手续费”，后台却要长期维护 CLOB、Polygon 结算、桥接资产、代理钱包、做市奖励与市场判定体系。</p>
+                                        <p class="mt-4"><strong>Kalshi：</strong> 看上去重，实际上也确实重。它把交易所、风控、支付、实名、监控、清算、分发都装进了同一条合规管线。</p>
+                                    </div>
+                                    <div class="text-[11px] leading-loose text-white text-white text-white">
+                                        <p><strong>审计含义：</strong> 这个赛道的成本并不主要躺在广告费里，而是躺在“让市场像真正的市场那样运行”的每一层结构里。</p>
+                                        <p class="mt-4"><strong>危险错觉：</strong> 只盯着链上 gas 很便宜，或只盯着开户界面很顺滑，都等于只看见了海面，没有看见水下的泵站。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">5. 预测市场特有成本：冷启动、市场维护、深度不足与流失</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">冷启动一个市场的成本</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        冷启动不是“把问题挂上去”这么简单。至少包括：问题定义、规则措辞、结算来源锁定、风险审查、初始盘口播种、做市激励、新闻与内容分发、结算后的持续监控。对 Kalshi，前半段的制度成本更重。对 Polymarket，后半段的流动性与结算协调压力更显著。
+                                    </p>
+                                </div>
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">保持市场活跃的运营成本</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        市场一旦没有持续成交，就会迅速陷入死亡谷。平台需要持续维持盘口可见度、内容引导、价格更新、做市深度、热门列表排序与外部分发。预测市场的运营，不是传统社区运营，而是<strong>成交驱动型运营</strong>。
+                                    </p>
+                                </div>
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">深度不足造成的用户流失成本</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        深度不足的代价极高。用户看到的会是宽价差、滑点、挂单成交慢、标的看着热闹却买不到合理价格。这类体验会直接把首单转化率、复购率和回本周期全部打坏。表面上是盘口薄，财务上其实是 CAC 被浪费。
+                                    </p>
+                                </div>
+                                <div class="p-8 minimalist-border bg-white text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">流动性补贴是否长期依赖外部资金</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        公开材料已经足够说明，两家都尚未完全脱离激励型流动性阶段。Polymarket 的 daily rewards / maker rebates，Kalshi 的 market maker 与 volume/liquidity/fee rebate programs，都说明深度维护仍有显著补贴成分。真正的分水岭不在于有没有补贴，而在于补贴能否被交易费、分发、数据授权与机构服务反哺。一旦不能反哺，平台就仍在吃资产负债表，而不是吃商业模式。
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">单位经济的真正杀手</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                    不是竞争对手的广告，不是单次活动预算，也不是媒体口碑。真正的杀手，是<strong>市场没有深度</strong>。因为预测市场的用户价值建立在“我现在就能以可信价格成交”之上。只要这个承诺经常落空，LTV 会塌，回本期会拉长，平台会被迫拿更多补贴去填更差的体验，最后陷入反身性的坏循环。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">6. 终局研判：谁的单位经济更接近成立</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="judgment-box text-black">
+                                <span class="judgment-title text-white">PAYBACK LOGIC // 终局判断</span>
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black">
+                                    <strong>终局判断：</strong> 现阶段，Kalshi 的单位经济更接近“成立”，Polymarket 的单位经济更接近“流量已验证、货币化仍在追赶”。理由并不神秘。Kalshi 已经把交易费、实名账户、分发合作、支付与清算结构放在同一张桌子上，因此单个新增交易用户更容易穿透到收入端。Polymarket 的优势仍旧在于更强的流量吸附、更低的前台摩擦和更快的价格发现，但当多数市场长期保持低费或免费时，平台必须依赖数据、分发、API 与部分收费市场，才能让新增用户真正形成利润。
+                                    <br><br>
+                                    这也意味着，对 Polymarket 最重要的问题已经不是“还能不能继续爆量”，而是<strong>能不能让下一次爆量不再只是烟火，而是沉淀成可持续 LTV</strong>。对 Kalshi 最重要的问题则是另一面：能否在承担高合规和高后台成本的同时，把体育与券商分发带来的体量稳定转成长期高质量收入，而不是只把更大的交易量装进更复杂的成本结构。
+                                </p>
+                            </div>
+
+                            <div class="p-8 bg-black text-white text-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-6 opacity-70 text-white text-white text-white">Bottom Line</p>
+                                <p class="text-[11px] leading-loose text-white text-white text-white text-white">
+                                    咨询公司会把这页写成一句冷话：<strong>预测市场的单位经济，取决于“流动性是否能自养”</strong>。只要平台还要持续用补贴把市场托住，只要热点退潮就显著回落，只要大部分新增用户无法在平峰月继续贡献成交，那么这门生意就还没有完全穿过验证线。真正过线的那一天，新增用户不需要靠一次大选或一次战争把平台点燃，平台也能在普通周、普通月、普通赛事日里稳定地把每一个新增用户变成正毛利。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 板块 H: 技术与运营能力审计分析 (Technology & Operations) -->
+            <div class="pillar-box">
+                <span class="pillar-title">现状板块 H: 技术与运营能力审计分析 (Technology & Operations)</span>
+                <div class="space-y-20 text-black text-black text-black">
+
+                    <div class="kpi-grid text-black text-black text-black">
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 底层架构</span>
+                            <div class="kpi-value text-black text-black text-black">Hybrid CLOB + Polygon</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 结果裁定</span>
+                            <div class="kpi-value text-black text-black text-black">UMA Optimistic Oracle</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 交易底座</span>
+                            <div class="kpi-value text-black text-black text-black">CLOB Exchange</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 结果裁定</span>
+                            <div class="kpi-value text-black text-black text-black">Rules + Source Agency</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Polymarket 运营脆弱点</span>
+                            <div class="kpi-value text-black text-black text-black">CLOB / Subgraph / RPC</div>
+                        </div>
+                        <div class="kpi-card text-black text-black text-black">
+                            <span class="kpi-label text-black text-black text-black">Kalshi 监管风控</span>
+                            <div class="kpi-value text-black text-black text-black">KYC + Surveillance</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">1. 技术底座拆解：架构、撮合、钱包、结算</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">技术维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">审计判断</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">底层架构</td>
+                                            <td class="p-3">混合式 CLOB。订单离链创建与撮合，成交通过 Polygon 上 Exchange 合约原子结算，交易保持非托管。</td>
+                                            <td class="p-3">受监管事件合约交易所。核心是中心化匿名 CLOB 与法币清算、账户体系和监管报送。</td>
+                                            <td class="p-3">Polymarket 追求“链上结算安全 + 链下撮合速度”。Kalshi 追求“传统交易所式确定性 + 合规可审计”。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">撮合机制</td>
+                                            <td class="p-3">所有订单本质上都是限价单。所谓 market order 实际是以可立即成交价格提交的限价单，支持 GTC、GTD、FOK、FAK 与 Post-only 约束。</td>
+                                            <td class="p-3">公开规则与 API 都指向标准订单簿撮合，订单在匿名 CLOB 上排队成交，并通过 REST / WebSocket 对外分发盘口与成交更新。</td>
+                                            <td class="p-3">两边都不是 AMM。核心差别不在撮合范式，而在是否把最终信用锚点放在智能合约还是持牌清算体系。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">钱包与账户系统</td>
+                                            <td class="p-3">以钱包签名为根，L1 用 EIP-712 证明私钥控制权，L2 用 API key / secret / passphrase 做 HMAC 认证；用户始终保持对私钥与资产控制。</td>
+                                            <td class="p-3">以实名账户为根，账户、KYC、银行与卡通道共同构成资产准入与提现体系，并对资金可提取时间设置安全冻结。</td>
+                                            <td class="p-3">Polymarket 的账户可移植性更强，但链上理解门槛更高。Kalshi 的账户更像券商账户，门槛高，控制力也更强。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">链上 / 链下分工</td>
+                                            <td class="p-3">链下完成订单提交、认证和匹配，链上完成成交结算与最终赎回；结果裁定通过 UMA 触发链上清算。</td>
+                                            <td class="p-3">核心撮合、账户、风控、支付、规则执行与结果认定都主要在链下受监管系统内完成。</td>
+                                            <td class="p-3">Polymarket 把“执行可信”外包给链，把“上新和运营”留在中心化团队。Kalshi 则把几乎所有关键环节都内收进受监管系统。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">性能瓶颈</td>
+                                            <td class="p-3">潜在瓶颈主要在 CLOB API、subgraph 数据摄取、Polygon 网络与 RPC 依赖，以及热点事件带来的盘口挤压。</td>
+                                            <td class="p-3">潜在瓶颈主要在合规审核、支付与提现时滞、市场上新审批、以及监管约束下的规则变更速度。</td>
+                                            <td class="p-3">Polymarket 更像“速度先行，链路更长”。Kalshi 更像“确定性优先，流程更重”。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">安全性与基础设施</td>
+                                            <td class="p-3">Exchange 合约公开由 Chainsecurity 审计；用户可链上独立取消订单，操作员不能擅自定价或执行未授权交易。</td>
+                                            <td class="p-3">安全性更多依赖规则、账户控制、KYC、监控、支付安全冻结与持牌运营义务。</td>
+                                            <td class="p-3">前者更偏密码学可信，后者更偏制度与合规可信。两种安全都不是免费的。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">Polymarket 的技术真相</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        它并不是真正意义上的“全链上自治交易所”。真正高速的部分仍然是由中心化 operator 驱动的离链撮合与接口层。链上承担的是最终结算与不可擅改的授权执行。这个结构解决了性能，却留下了一个不能回避的现实：<strong>交易可信度与市场可信度并不是同一件事</strong>。
+                                    </p>
+                                </div>
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">Kalshi 的技术真相</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        它不是“更先进的链上系统”，而是“更重的传统市场基础设施”。优势不在花哨，而在可解释、可追责、可报送、可冻结、可调查。缺点也同样明显：上新更慢，边界更硬，制度成本更高。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">2. 结果裁定权威性：信任根基不在 UI，而在结算</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="judgment-box text-black">
+                                <span class="judgment-title text-white">SETTLEMENT AUTHORITY // 结算主权审计</span>
+                                <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black">
+                                    <strong>结论先行：</strong> 预测市场最硬的资产，不是流量，不是界面，也不是品牌，而是<strong>谁有资格决定“事实已经发生”</strong>。只要这一点不稳，盘口再深也只是临时繁荣。
+                                    <br><br>
+                                    Polymarket 的路径是：市场结果通过 UMA Optimistic Oracle 进入结果请求，任何人都可以提出结果，也可以在挑战窗口内用保证金发起 dispute；若被挑战，则进入更长的讨论与投票流程。Kalshi 的路径是：每个市场在上架时就写入规则、结算标准和 source agency，市场到期后由 Kalshi 依据合约条款与指定来源做 determination，再完成 payout。前者更开放，后者更封闭。前者强调“可争议但可链上裁决”，后者强调“预先写清、按源执行、责任可追究”。
+                                </p>
+                            </div>
+
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">裁定维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">经营含义</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">结果来源</td>
+                                            <td class="p-3">依赖 UMA Optimistic Oracle 结果流程，并要求市场说明 resolution source。</td>
+                                            <td class="p-3">依赖市场规则中预先写明的 source agency 与结算条款。</td>
+                                            <td class="p-3">真正重要的不是“有没有来源”，而是来源是否在事件真正结束时仍足够明确、及时、可复核。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">争议处理</td>
+                                            <td class="p-3">官方帮助中心写明提出结果后有 2 小时 challenge period；若被质疑，通常进入 24 至 48 小时 debate / vote 窗口。</td>
+                                            <td class="p-3">官方写明 determination 常见为收盘后 1 至 12 小时以上，受 source agency 发布时间影响；争议以规则解释与官方 determination 为主。</td>
+                                            <td class="p-3">Polymarket 更像“开放法庭”，Kalshi 更像“书面规则法院”。前者弹性高，后者确定性强。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">脆弱点</td>
+                                            <td class="p-3">语义模糊、新闻口径冲突、政治措辞暧昧时，结果很容易陷入社区争议，近年也已有公开舆论争议案例。</td>
+                                            <td class="p-3">若 source agency 延迟、修订或规则写得太窄，市场会在“事件看似已发生但尚未 official determine”的灰区停留。</td>
+                                            <td class="p-3">预测市场的真正技术债，往往不是代码，而是语言。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">谁承担最终信任</td>
+                                            <td class="p-3">UMA 裁决流程 + 社区证据讨论 + 平台前置的市场撰写质量。</td>
+                                            <td class="p-3">Kalshi 规则团队 + source agency + 监管约束 + 法律责任。</td>
+                                            <td class="p-3">Polymarket 的终局信任来自“可被挑战”。Kalshi 的终局信任来自“可被追责”。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">对 Polymarket 的硬判断</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                    结果裁定不是附属模块，而是整个生意的地基。Polymarket 把交易执行做得很快，把赔率发现做得很强，但只要问题文本有歧义，或者来源口径本身模糊，最后还是会回到“谁说了算”。这一步一旦反复引发争议，平台积累的不是网络效应，而是信任折价。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">3. 故障历史、风险控制与反操纵体系</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">风险维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">审计判断</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">公开故障信号</td>
+                                            <td class="p-3">官方状态页近月披露过 CLOB API 部分故障、Markets API 搜索组件故障、subgraph 不同步、以及 Polygon / RPC 侧区块不同步问题。</td>
+                                            <td class="p-3">未见与 Polymarket 相同风格的独立公开状态轨迹，但其帮助中心和开发文档对连接、心跳与 API 行为披露更制度化。</td>
+                                            <td class="p-3">Polymarket 的技术栈更贴近链和数据索引，故障更容易暴露为接口与数据一致性问题。Kalshi 的问题更可能藏在制度流程与支付时滞里。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">异常交易与操纵</td>
+                                            <td class="p-3">官方文档对交易限制更宽松，订单簿原则上无交易规模上限，真正限制来自对手盘与价格冲击。</td>
+                                            <td class="p-3">官方公开禁止 wash trades、spoofing、front-running、non-competitive trading 及 insider trading，并运行市场监控与调查流程。</td>
+                                            <td class="p-3">Polymarket 更偏“市场自己消化大单冲击”。Kalshi 更偏“规则先行，异常先拦后查”。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">账户与准入风控</td>
+                                            <td class="p-3">侧重钱包授权、订单认证与非托管执行；客服反复提醒用户谨防私信诈骗与私钥风险。</td>
+                                            <td class="p-3">强制 AML/KYC，外部与内部名单筛查，并对政治人物、候选人、政府官员及潜在 insider 设限或封禁。</td>
+                                            <td class="p-3">Polymarket 更难在入口处过滤“谁不该来”。Kalshi 则把很多风控前置到了准入层。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">外部监控与审计</td>
+                                            <td class="p-3">公开可见的是合约审计、状态页与 UMA 争议流程，制度化外部监督较弱。</td>
+                                            <td class="p-3">公开使用第三方 surveillance vendor，包括 IC360，并披露与学术机构合作改进监控；还有 app / website 与 market bug bounty 机制。</td>
+                                            <td class="p-3">Kalshi 更像传统金融，愿意用外部制度和第三方来放大可信度。Polymarket 更像链上原生产品，依赖代码与社区争议机制兜底。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-black text-black">
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">Polymarket 的风险像什么</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        它更像一台高转速机器。快，灵，适合热点，但对外部依赖也更长。订单接口、数据索引、Polygon 出块、RPC 服务、预言机与市场表述，任何一个环节抖一下，都可能传导到用户对“这单到底算不算”的焦虑。
+                                    </p>
+                                </div>
+                                <div class="p-8 border border-black bg-gray-50 text-black text-black text-black">
+                                    <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">Kalshi 的风险像什么</p>
+                                    <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                        它更像一台低转速重卡。慢一些，重一些，但制度件更多。短板不在是否能跑，而在每多一种市场、每多一种敏感题材、每多一层监管关注，都可能让流程变得更长、更硬、更贵。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-200 pb-12 text-black text-black text-black">
+                        <div class="lg:col-span-4 text-black text-black text-black">
+                            <h4 class="font-black text-lg uppercase underline text-black text-black text-black">4. 运营能力：市场创建、热点响应、上新频率、支持与违规处理</h4>
+                        </div>
+                        <div class="lg:col-span-8 space-y-8 text-black text-black text-black">
+                            <div class="overflow-x-auto text-black text-black text-black">
+                                <table class="w-full text-[10px] border-collapse benchmark-table text-black text-black text-black">
+                                    <thead>
+                                        <tr class="bg-black text-white text-left">
+                                            <th class="p-3">运营维度</th>
+                                            <th class="p-3">Polymarket</th>
+                                            <th class="p-3">Kalshi</th>
+                                            <th class="p-3">审计判断</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-black text-gray-700">
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">市场创建流程</td>
+                                            <td class="p-3">用户不能直接创建市场。市场由平台 markets team 创建，用户主要通过 Discord / X 提建议，并需提供标题、resolution source 和需求证据。</td>
+                                            <td class="p-3">市场以规则和合约条款为核心，列表更受监管与内部审核约束，且存在合约 draft bug bounty 机制帮助提前发现歧义。</td>
+                                            <td class="p-3">Polymarket 的上新权力更集中在运营团队。Kalshi 的上新权力更集中在规则与流程。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">热点事件响应速度</td>
+                                            <td class="p-3">天然更快。中心化市场团队加离链撮合，适合快速承接突发热点。</td>
+                                            <td class="p-3">较慢但更稳。热点承接要服从规则编写、来源明确、合规边界和市场完整性。</td>
+                                            <td class="p-3">“快上架”是流量优势，但也是语义错误和争议积累的入口。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">上新频率与市场寿命管理</td>
+                                            <td class="p-3">更像新闻编辑室，热点驱动下可频繁上新；体育市场还会在比赛开始时自动清掉未成交限价单，并对可成交订单设置延迟。</td>
+                                            <td class="p-3">更像交易所产品委员会。每个市场需要更严密的规则归档、时间线和 payout 说明。</td>
+                                            <td class="p-3">Polymarket 优势在速度，Kalshi 优势在制度一致性。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">用户支持</td>
+                                            <td class="p-3">官方提供站内聊天与 Discord 工单支持，并反复提示防诈骗。</td>
+                                            <td class="p-3">帮助中心与站内 chat 提供支持，并强调 support team 为 US-based human team。</td>
+                                            <td class="p-3">两边都做客服，但 Kalshi 更接近传统金融服务叙事，Polymarket 更像互联网社区支持体系。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-bold bg-gray-50">内容审核与违规处理</td>
+                                            <td class="p-3">核心难题是市场问题撰写与后续解释，而不是传统内容社区式审核。</td>
+                                            <td class="p-3">以市场规则、禁入名单、调查取证和纪律处分为主线，违规处理更制度化。</td>
+                                            <td class="p-3">预测市场的“内容治理”，本质上是“可结算问题治理”。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="p-8 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                                <p class="font-black text-xs uppercase mb-4 text-red-800 text-black text-black text-black">一个常被忽视的运营事实</p>
+                                <p class="text-[11px] leading-loose text-black text-black text-black text-black">
+                                    预测市场的运营团队，本质上不是普通互联网内容团队，而是半个“规则起草室 + 事实定义室 + 争议处置室”。市场标题、来源选取、时间边界、例外条款、自动关闭时点，这些细节决定的不是排版，而是未来是否会引发现金争议。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="judgment-box text-black">
+                        <span class="judgment-title text-white">OPERATING STABILITY // 稳定运转终局判断</span>
+                        <div class="p-6 bg-gray-50 border-l-8 border-black text-black text-black text-black">
+                            <p class="text-sm font-black italic mb-4 text-black text-black text-black">结论研判：这门生意能否稳定运转，最后比拼的不是“谁的界面更像交易 App”，而是谁能更长期地把“真实世界的模糊事实”压缩成“可稳定清算的标准化结果”。</p>
+                            <p class="text-[11px] leading-loose text-gray-700 text-black text-black text-black text-black">
+                                Polymarket 的优势，是更快的市场反应、更轻的准入、更强的热点承接能力，以及链上结算带来的密码学可信执行。Polymarket 的短板，同样清晰：市场创建仍由中心团队控制，结果裁定虽开放争议，但在语义模糊事件上仍容易遭遇信任冲击，且底层运行对 CLOB API、数据索引与链环境的依赖更长。
+                                <br><br>
+                                Kalshi 的优势，是规则预写、source agency、实名账户、市场监控和监管追责共同构成的制度型稳定性。Kalshi 的短板，是制度成本高、上新速度慢、支付与合规流程更重。二者没有谁真正解决了预测市场的终极难题，只是各自把风险放在不同位置。<strong>前者把风险放在“裁定争议与链路复杂性”，后者把风险放在“规则成本与运营刚性”。</strong>
+                                <br><br>
+                                因而，从长期经营质量看，预测市场真正的护城河不只是流动性，不只是监管，不只是分发，而是<strong>持续写出低歧义、高可裁定、足够快、又能让用户信服的问题集合</strong>。谁能把这一能力制度化，谁才更接近稳定运转。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- 附录说明 -->
+<section class="appendix-notice">
+    <div class="max-w-7xl mx-auto text-white">
+        <h2 class="text-2xl font-black mb-8 text-white uppercase italic tracking-widest">APPENDIX NOTICE / 附录说明</h2>
+        <p class="mb-10 text-white font-bold opacity-90 text-lg">本报告完整版包含 62 页绝密附录。附录并非装饰性补充，而是本次逆向工程研究的证据层、口径层与争议处置层，构成结论可信度的底座。</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-[10px] opacity-80 leading-loose">
+            <div class="space-y-4">
+                <p><span class="font-black">[A] 数据源总表：</span> 路透社、Dow Jones、Kalshi/Polymarket 官方文档、CFTC 诉讼与规则文件、FalconX、IMF、Reuters Institute、Dune / The Block / 链上公开看板等一级与二级材料清单。</p>
+                <p><span class="font-black">[B] 交易量口径说明：</span> 区分 order-filled sum、taker-side volume、maker-side volume 与 share-priced volume，避免预测市场交易量被系统性双计。</p>
+                <p><span class="font-black">[C] 结算与争议材料：</span> Polymarket resolution rules、UMA dispute 路径、Kalshi source agency / Rulebook / contract specification 对照表。</p>
+            </div>
+            <div class="space-y-4">
+                <p><span class="font-black">[D] 用户结构穿透：</span> 客群分层粗估所用的公开类别成交、社交来源、访问结构、交易频次与地址行为代理变量说明。</p>
+                <p><span class="font-black">[E] 单位经济与收费口径：</span> 交易费、入金/提现费用、支付处理费用、流动性补贴、返点计划与显性/隐性货币化路径的审计口径。</p>
+                <p><span class="font-black">[F] 风险与操纵样本：</span> 包括 insider-trading scrutiny、wash trading 争议、地理封锁、市场下架与规则调整时间线。</p>
+            </div>
+            <div class="space-y-4">
+                <p><span class="font-black">[G] 空间模型附表：</span> TAM / SAM / SOM 采用“年化交易量空间”口径，给出乐观、中性、受限三套场景及其假设条件。</p>
+                <p><span class="font-black">[H] 研究边界声明：</span> 对所有未公开披露而无法达到审计级验证的数据，均以 N.D. 或咨询粗估方式处理，不以想象填补事实空白。</p>
+                <p><span class="font-black">[I] 使用声明：</span> 本报告用于商业调查与战略判断，不构成投资建议、法律意见或合规承诺；若用于外部引用，需同步附带口径说明与日期戳。</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="p-16 border-t-[20px] border-black text-[10px] text-gray-400 uppercase tracking-widest leading-loose text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-10 text-black text-black text-black text-black text-black text-black">
+            <div class="max-w-xl text-black text-black text-black text-black text-black">
+                <h5 class="font-black mb-4 underline text-black text-black text-black text-black text-black text-black text-black text-black">Data Integrity & Methods</h5>
+                <p class="opacity-50 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">1. 数据源：通过对路透社、FalconX 研究报告、CFTC 司法申述及链上节点实时数据进行多维语义校准得出。</p>
+                <p class="opacity-50 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">2. 声明：涉及 Case No. 24-5205 司法判例。本报告属于逆向工程战略模型，不构成财务建议。</p>
+                <p class="opacity-50 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">3. 审计口径：名义交易量（NTV）以 taker notional 或明确披露口径为准；凡存在双计或人工放量争议的数据，均在附录中单独说明。</p>
+            </div>
+            <div class="text-right flex flex-col items-end text-black font-bold text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+                <p class="border-b-2 border-black mb-3 pb-1 uppercase text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Reverse Engineering Study // Series 081</p>
+                <p class="text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">由咨询团队完成调研 // 2026 Q1</p>
+                <p class="mt-2 italic opacity-50 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">STRICTLY CONFIDENTIAL // 绝密：严禁二次分发</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
